@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    width: 739px;
+    float:right;
+    height: 1px;
+    border-bottom: none;
+}
+
+.cart-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    border: 2px solid black;
+    width: 200px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.total {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* --------- HERO ------------- */
+
+.hero {
+    margin-top: 49.2px;
+    width: calc(100vw - 200px);
+    height: 400px;
+    background-image: url('img/hero-1.jpeg');
+    background-size:auto;
+    background-position: center;
+    border: #000 1px solid;
+    position: relative;
+}
+
+
+.logo {
+    height: 150px;
+    width: 150px;
+    background-image: url('img/logo.png');
+    background-size: contain;
+    position: absolute;
+    bottom: -64px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h5 {
+    color: #fff;
+    text-shadow: 0px 0px 1px #000;
+    text-align: center;
+    bottom: 38px;
+    text-shadow: 0px 0px 5px #ba6fb4;
+    margin: 57px 2px 0px 2px;
+}
+
+h5.logo-warp-one {
+    transform: rotateY(30deg) rotate(10deg) translateY(4px);
+}
+h5.logo-warp-two {
+    transform: translateY(-2.5px);
+}
+h5.logo-warp-three {
+    transform: rotateY(-30deg) rotate(-10deg) translateY(-1px);
+}
+
+nav {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    width: calc(100% - 200px);
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+.nav-links li {
+    text-align: center;
+    margin: 15px 30px;
+}
+
+.nav-links a {
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    color:#656566;
+}
+
+.nav-links a::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -16px;
+    width: 100%;
+    height: 1px;
+    background-color: #ba6fb4;
+    opacity: 0;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.nav-links a:hover::after {
+    opacity: 1;
+}
+
+
