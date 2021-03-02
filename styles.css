@@ -9,6 +9,7 @@ hr {
     float:right;
     height: 1px;
     border-bottom: none;
+    border-color: #000;
 }
 
 .cart-bar {
@@ -111,7 +112,6 @@ nav {
     list-style-type: none;
     width: calc(100% - 200px);
     flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: end;
 }
 
