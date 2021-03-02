@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Shippori Mincho B1', serif;
 }
 
 a {
@@ -9,7 +10,7 @@ a {
 }
 
 hr {
-    width: 749px;
+    width: 794px;
     float: right;
     height: 1px;
     border-bottom: none;
@@ -75,11 +76,11 @@ hr::after {
     text-align: center;
     bottom: 38px;
     text-shadow: 0px 0px 5px #ba6fb4;
-    margin: 57px 2px 0px 2px;
+    margin: 57px 0px 0px 0px;
 }
 
 h5.logo-warp-one {
-    transform: rotateY(30deg) rotate(10deg) translateY(4px);
+    transform: rotateY(30deg) rotate(10deg) translateY(0px);
 }
 h5.logo-warp-two {
     transform: translateY(-2.5px);
@@ -89,7 +90,7 @@ h5.logo-warp-three {
 }
 
 nav {
-    width: 770px;
+    width: 815px;
     float: right;
     position: sticky;
     top: 0;
@@ -158,8 +159,8 @@ nav::after {
 }
 
 .menu {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 30px;
 }
 
 .menu-item-container {
@@ -187,11 +188,11 @@ nav::after {
 }
 
 .item-name {
-   padding: 10px;
+   padding: 5px;
 }
 
 .item-description {
-    padding: 10px;
+    padding: 5px;
 }
 
 .item-price {
