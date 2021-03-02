@@ -9,7 +9,7 @@ a {
 }
 
 hr {
-    width: 779px;
+    width: 744px;
     float:right;
     height: 1px;
     border-bottom: none;
@@ -84,7 +84,7 @@ h5.logo-warp-three {
 }
 
 nav {
-    width: 800px;
+    width: 770px;
     float: right;
     position: sticky;
     top: 0;
@@ -113,15 +113,11 @@ nav::after {
 
 .nav-links li {
     text-align: center;
-    margin: 15px 30px;
+    margin: 15px 25px;
 }
 
 .nav-links li:first-of-type {
-    margin-left: 10px;
-}
-
-.nav-links li:last-of-type {
-    margin-right: 20px;
+    margin-left: 0px;
 }
 
 .nav-links a {
