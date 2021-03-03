@@ -36,7 +36,7 @@ hr::after {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index: 10;
+    z-index: 2;
 }
 
 
@@ -69,7 +69,6 @@ hr::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
     background-color: #fff;
     border-radius: 50%;
 }
@@ -99,7 +98,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: #fff;
-    z-index: 5;
+    z-index: 1;
     border-left: 1px solid;
     border-bottom: 1px solid #000;
     border-color: transparent;
