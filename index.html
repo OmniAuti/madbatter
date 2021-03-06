@@ -32,31 +32,149 @@
         <hr>
     </nav>
 
-  
+    <div id="modal" class="modal">
+        <div class="modal-content-container">
+            <span class="closeBtn" id="closeBtn">&times;</span>
 
+            <div class="modal-item-info"></div>
+
+                <hr>
+
+                <div class="customize-order">
+                   
+                        
+                        <h3>Choose Syrup</h3>
+
+                        <div class="free-syrup-flex">
+                        
+                            <div>
+                            <input checked="true" type="radio" name="free-syrup" value="maple" id="maple" class="free-checked">
+                            <label for="maple">Maple</label>
+                            </div>
+                            <div>
+                            <input type="radio" name="free-syrup" value="strawberry" id="strawberry" class="free-checked">
+                            <label for="strawberry">Strawberry</label>
+                            </div>
+                            <div>
+                            <input type="radio" name="free-syrup" value="blueberry" id="blueberry" class="free-checked">
+                            <label for="blueberry">Blueberry</label>
+                            </div>
+                            <div>
+                            <input type="radio" name="free-syrup" value="honey" id="honey" class="free-checked">
+                            <label for="honey">Honey</label>
+                            </div>
+                            <div>
+                            <input type="radio" name="free-syrup" value="chocolate" id="chocolate" class="free-checked">
+                            <label for="chocolate">Chocolate</label>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <div class="extra-syrup">
+
+                            <h3>Extra Syrup</h3>
+
+                            <div class="flex-modal-extra-items">
+                                <div>
+
+                                <input type="checkbox" name="extra-syrup" value="maple" id="extra-maple" class="check">
+                                <label for="extra-maple">Maple<p class="modal-extra-price">$0.50</p></label>
+    
+                                </div>
+                                <div>
+                                <input type="checkbox" name="extra-syrup" value="strawberry" id="extra-strawberry" class="check">
+                                <label for="extra-strawberry">Strawberry<p class="modal-extra-price">$0.75</p></label>
+          
+                                </div>
+                                <div>
+                                <input type="checkbox" name="extra-syrup" value="blueberry" id="extra-blueberry" class="check">
+                                <label for="extra-blueberry">Blueberry<p class="modal-extra-price">$0.75</p></label>
+                                
+                                </div>
+                                <div>
+                                <input type="checkbox" name="extra-syrup" value="honey" id="extra-honey" class="check">
+                                <label for="extra-honey">Honey<p class="modal-extra-price">$0.50</p></label>
+                                
+                                </div>
+                                <div>
+                                <input type="checkbox" name="extra-syrup" value="chocolate" id="extra-chocolate" class="check">
+                                <label for="extra-chocolate">Chocolate<p class="modal-extra-price">$1.25</p></label>
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="toppings">
+
+                            <h3>Toppings</h3>
+
+                            <div class="flex-modal-extra-items">
+                                <div>
+                                <input type="checkbox" name="topping" value="banana" id="banana" class="check">
+                                <label for="banana">Banana<p class="modal-extra-price">$1.50</p></label>
+                 
+                                </div>
+                                <div>
+                                <input type="checkbox" name="berries" value="berries" id="berries" class="check">
+                                <label for="berries">Mixed Berries<p class="modal-extra-price">$2.25</p></label>
+                                
+                                </div>
+                                <div>
+                                <input type="checkbox" name="pecans" value="pecans" id="pecans" class="check">
+                                <label for="pecans">Carmel Roasted Pecans<p class="modal-extra-price">$1.75</p></label>
+                                
+                                </div>
+                                <div>
+                                <input type="checkbox" name="powdered sugar" value="psugar" id="psugar" class="check">
+                                <label for="psugar">Powdered Sugar<p class="modal-extra-price">$0.50</p></label>
+                                
+                                </div>
+                                <div>
+                                <input type="checkbox" name="butter" value="butter" id="butter" class="free-checked">
+                                <label for="butter">Butter<p>Free</p></label>
+                                
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <div class="add-to-cart">
+                        <button class="add-to-cart-btn" id="add-to-cart-btn">Add To Cart</button>
+                        <p class="modal-total" style="text-decoration: underline;">Total: $<span class="final-total-modal"></span></p>
+                        </div>
+                </div>
+            </div> 
+        </div>
+  
     <section class="waffles" id="waffles">
 
         <h2 class="menu">Waffles</h2>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="img/hero-1.jpeg" alt="">
-            <h3 class="item-name">Menu Item Name</h3>
+            <h3 class="item-name">Menu Item Name 1</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
-            <h3 class="item-price">$100</h3>
+            <h3 class="item-price">$12</h3>
         </div>
 
-        <div class="menu-item-container">
-            <img class="item-picture" src="img/hero-1.jpeg" alt="">
-            <h3 class="item-name">Menu Item Name</h3>
+        <div class="menu-item-container" id="modal-open">
+            <img class="item-picture" src="img/waffletwo.png" alt="">
+            <h3 class="item-name">Menu Item Name 2</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
-            <h3 class="item-price">$100</h3>
+            <h3 class="item-price">$15</h3>
         </div>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="img/hero-1.jpeg" alt="">
-            <h3 class="item-name">Menu Item Name</h3>
+            <h3 class="item-name">Menu Item Name 3</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
-            <h3 class="item-price">$100</h3>
+            <h3 class="item-price">$8.99</h3>
         </div>
 
         <div class="menu-item-container">
