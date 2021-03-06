@@ -14,13 +14,7 @@ hr {
     float: right;
     height: 1px;
     border-bottom: none;
-    border-color: #000;
-}
-
-hr::after {
-    content: '';
-    display: table;
-    clear: both;
+    border-color: #656566;
 }
 /* -------- CART ---------- */
 
@@ -221,14 +215,13 @@ nav::after {
 
 .modal-content-container {
     background-color: #fff;
-    margin: 20% auto;
+    margin: 1.5% auto;
     padding: 30px 20px;
     width: 55%;
     height: auto;
     box-shadow: 1px 5px 8px rgba(0,0,0, 0.5), -1px -5px 8px rgba(0,0,0,0.5);
     border-radius: 10px;
     position: relative; 
-    top: -240px;
 }
 
 .closeBtn {
@@ -284,11 +277,12 @@ button:active {
     transform: scale(.98);
 }
 
-button:focus {
+button:focus,
+    input[type=number]  {
     outline: none;
 }
 
-button:hover {
+.add-to-cart-btn:hover {
     background-color: #ed9015;
 }
 
@@ -296,4 +290,54 @@ button:hover {
     position: absolute;
     bottom: 46px;
     right: 30px;
+    font-size: 1.65em;
+}
+
+.add-container {
+    position: absolute;
+    bottom: 46px;
+    left: 30px;
+    outline: 1px solid #656566;
+    outline-offset: -1px;
+}
+
+.minus-btn {
+    border: 1px solid #656566;
+    width: 32px;
+    font-size: 1.55em;
+    background-color: #fff; 
+    cursor: pointer;
+    height: 100%;
+}
+
+.add-btn {
+    border: 1px solid #656566;
+    width: 32px;
+    font-size: 1.55em;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.add-btn:active,
+    .minus-btn:active {
+        border: 1px solid #ba6fb4;
+    }
+
+.num-add {
+    width: 32px;
+    font-size: 1.5em;
+    text-align: center;
+    cursor: default;
+    border: none;
+}
+
+/* Chrome, Safari, Edge, Opera NUM-ADD ARROW REMOVE*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox  NUM-ADD ARROW REMOVE*/
+input[type=number] {
+  -moz-appearance: textfield;
 }

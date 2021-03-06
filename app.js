@@ -23,6 +23,8 @@ const modalClose = document.getElementById('closeBtn')
 
 const modalContent = document.querySelector('.modal-item-info')
 
+const totalModalPrice = document.querySelector('.modal-total span')
+
 
 for (const modalOpens of modalOpen) {
     modalOpens.addEventListener('click', opensModal)
@@ -39,12 +41,14 @@ function opensModal() {
  function closesModal() {
     modal.style.display = 'none'
     clearCheckedBoxes()
+    totalModalPrice.innerText = ''
  }
 
 function outsideModalClick(e) {
     if (e.target === modal) {
         modal.style.display = 'none'
         clearCheckedBoxes()
+        totalModalPrice.innerText = ''
     }
 }
 
@@ -96,8 +100,6 @@ function modalMenuImport(){
                 modalContent.appendChild(modalInfo)
 
                 // ADJUSTING MODAL TOTAL PRICE
-
-                const totalModalPrice = document.querySelector('.modal-total span')
 
                 totalModalPrice.innerText = `${item.price}`
 

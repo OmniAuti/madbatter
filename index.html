@@ -145,6 +145,11 @@
                         <hr>
 
                         <div class="add-to-cart">
+                        <div class="add-container">
+                            <button id="minus-main-order" class="minus-btn"><i class="fas fa-minus"></i></button>
+                        <input class="num-add" id="num-add" type="number" min="0" max="99" value="1" readonly>
+                            <button id="plus-main-order" class="add-btn"><i class="fas fa-plus"></i></button>
+                        </div>
                         <button class="add-to-cart-btn" id="add-to-cart-btn">Add To Cart</button>
                         <p class="modal-total" style="text-decoration: underline;">Total: $<span class="final-total-modal"></span></p>
                         </div>
@@ -354,6 +359,10 @@
         
     </section>
 
+
+
         <script src="app.js"></script>
+        <script src="https://kit.fontawesome.com/44e20fa782.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
