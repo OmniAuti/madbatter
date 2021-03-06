@@ -271,11 +271,6 @@ input,
     text-align: center;
 }
 
-.add-to-cart p {
-    
-    margin-top: 23px;
-}
-
 .add-to-cart-btn {
     padding: 1em 2.5em;
     border-radius: 10px;
@@ -287,6 +282,10 @@ input,
 
 button:active {
     transform: scale(.98);
+}
+
+button:focus {
+    outline: none;
 }
 
 button:hover {
