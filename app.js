@@ -5,9 +5,8 @@ const hr = document.querySelector('hr')
 
 //array for menu price total
 let storedTotal = []
-let storedModalCartTotal = []
 
-
+//NAV BAR SCROLL FEATURE
 window.addEventListener('scroll', () => {
     const navTop = nav.getBoundingClientRect()
    if (navTop.top === 0) {
@@ -191,13 +190,11 @@ const modalMainItemNum = document.getElementById('num-main-order')
 modalMainItemAdd.addEventListener('click', mainOrderAdd)
 modalMainItemSubtract.addEventListener('click', mainOrderSub)
 
-
-
-
 let mainOrderNum = 1
 
 
 function mainOrderAdd() {
+
     mainOrderNum++
     modalMainItemNum.value = mainOrderNum
 
@@ -208,24 +205,26 @@ function mainOrderAdd() {
     
    totalModalPrice.innerText = `${numTotal + storedTotalNum}`
 
-    }
+   if (mainOrderNum > 1) {
+    modalMainItemSubtract.disabled = false
+   }
+}
 
 function mainOrderSub() {
+
+
     mainOrderNum--
     modalMainItemNum.value = mainOrderNum
-    if (mainOrderNum <= 1) {
+    if (mainOrderNum < 2) {
         mainOrderNum = 1
         modalMainItemNum.value = mainOrderNum
+        modalMainItemSubtract.disabled = true
     }   
-
+   
     const total = totalModalPrice.innerText
     const numTotal = parseFloat(total)
     const storedTotalNum = parseFloat(storedTotal[0])
 
-    if (mainOrderNum > 2) {
    totalModalPrice.innerText = `${numTotal - storedTotalNum}`
-    } else if (mainOrderNum <= 1) {
-        totalModalPrice.innerText = storedTotalNum
-    }
 
 }
