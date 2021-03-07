@@ -3,6 +3,10 @@
 const nav = document.querySelector('nav')
 const hr = document.querySelector('hr')
 
+//array for menu price total
+let storedTotal = []
+let storedModalCartTotal = []
+
 
 window.addEventListener('scroll', () => {
     const navTop = nav.getBoundingClientRect()
@@ -20,10 +24,8 @@ window.addEventListener('scroll', () => {
 const modal = document.getElementById('modal')
 const modalOpen = document.querySelectorAll('#modal-open')
 const modalClose = document.getElementById('closeBtn')
-
 const modalContent = document.querySelector('.modal-item-info')
-
-const totalModalPrice = document.querySelector('.modal-total span')
+const totalModalPrice = document.querySelector('.final-total-modal')
 
 
 for (const modalOpens of modalOpen) {
@@ -42,6 +44,9 @@ function opensModal() {
     modal.style.display = 'none'
     clearCheckedBoxes()
     totalModalPrice.innerText = ''
+    modalMainItemNum.value = 1
+    mainOrderNum = 1
+    storedTotal = []
  }
 
 function outsideModalClick(e) {
@@ -49,6 +54,9 @@ function outsideModalClick(e) {
         modal.style.display = 'none'
         clearCheckedBoxes()
         totalModalPrice.innerText = ''
+        modalMainItemNum.value = 1
+        mainOrderNum = 1
+        storedTotal = []
     }
 }
 
@@ -73,7 +81,7 @@ function modalMenuImport(){
                 let desc = e.target.parentElement.children[2].innerText
                 let price = e.target.parentElement.children[3].innerText
 
-                let finalPrice = price.slice(1).trim()
+                let finalPrice = price.slice(1).trim(' ')
 
 
                 const item = {}
@@ -101,17 +109,20 @@ function modalMenuImport(){
 
                 // ADJUSTING MODAL TOTAL PRICE
 
+                const storedTotalvar = `${item.price}`
+                storedTotal.push(storedTotalvar)
+
                 totalModalPrice.innerText = `${item.price}`
+
+                
 
             }
 
         })
     }
-
 }
 
 modalMenuImport()
-
 
 // updating modal cart price
 
@@ -130,19 +141,20 @@ function updateModalPrice() {
 
             // CART TOTAL
 
-                const total = e.target.parentElement.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild.textContent
+                const total = parseFloat(totalModalPrice.innerText)
                 let numTotal = parseFloat(total)
 
-                const cartTotal = e.target.parentElement.parentElement.parentElement.parentElement.lastElementChild.lastElementChild.lastElementChild
-
-
+               // const numTotalCart = parseFloat(totalModalPrice.innerText)
+                //console.log(numTotalCart)
             // ADD/SUB CART TOTAL
 
             if (e.target.checked) {
-                cartTotal.innerText = numTotal + numPrice
+                totalModalPrice.innerText = `${numTotal + numPrice}`
             } else {
-                cartTotal.innerText = numTotal - numPrice
+                totalModalPrice.innerText = `${numTotal - numPrice}`
             }
+
+
           
         })
     }
@@ -165,4 +177,55 @@ function clearCheckedBoxes() {
         freeCheck.checked = false
     }
         mapleDefault.checked = true
+}
+
+// MODAL ITEM ADD or SUB main menu item
+
+const modalMainItemAdd = document.getElementById('plus-main-order')
+const modalMainItemSubtract = document.getElementById('minus-main-order')
+const modalMainItemNum = document.getElementById('num-main-order')
+
+
+
+
+modalMainItemAdd.addEventListener('click', mainOrderAdd)
+modalMainItemSubtract.addEventListener('click', mainOrderSub)
+
+
+
+
+let mainOrderNum = 1
+
+
+function mainOrderAdd() {
+    mainOrderNum++
+    modalMainItemNum.value = mainOrderNum
+
+
+    const total = totalModalPrice.innerText
+    const numTotal = parseFloat(total)
+    const storedTotalNum = parseFloat(storedTotal[0])
+    
+   totalModalPrice.innerText = `${numTotal + storedTotalNum}`
+
+    }
+
+function mainOrderSub() {
+    mainOrderNum--
+    modalMainItemNum.value = mainOrderNum
+    if (mainOrderNum <= 1) {
+        mainOrderNum = 1
+        modalMainItemNum.value = mainOrderNum
+    }   
+
+    const total = totalModalPrice.innerText
+    const numTotal = parseFloat(total)
+    const storedTotalNum = parseFloat(storedTotal[0])
+
+    if (mainOrderNum > 2) {
+   totalModalPrice.innerText = `${numTotal - storedTotalNum}`
+    } else if (mainOrderNum <= 1) {
+        totalModalPrice.innerText = storedTotalNum
+    }
+
 }

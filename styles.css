@@ -180,7 +180,7 @@ nav::after {
     width: 150px;
     height: 150px;
     float: left;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 5px 0px 0px 5px;
     object-fit: cover;
     margin-right: 10px;
 }
@@ -194,15 +194,15 @@ nav::after {
 }
 
 .item-price {
-    position: absolute;
     bottom: 10px;
     left: 160px;
+    padding: 13px;
 }
 
 /* -------- MODAL -------- */
 
 .modal {
-    display: none;
+    display: block;
     position: fixed;
     z-index: 10;
     left: 0;
@@ -323,12 +323,14 @@ button:focus,
         border: 1px solid #ba6fb4;
     }
 
-.num-add {
+.num-main-order {
     width: 32px;
     font-size: 1.5em;
     text-align: center;
     cursor: default;
     border: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Chrome, Safari, Edge, Opera NUM-ADD ARROW REMOVE*/
@@ -340,4 +342,8 @@ input::-webkit-inner-spin-button {
 /* Firefox  NUM-ADD ARROW REMOVE*/
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.stored-price {
+    display: none;
 }
