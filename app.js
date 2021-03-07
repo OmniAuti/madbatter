@@ -228,3 +228,20 @@ function mainOrderSub() {
    totalModalPrice.innerText = `${numTotal - storedTotalNum}`
 
 }
+
+
+// MOVING MODAL ITEM TO CART
+
+const cartBar = document.querySelector('.cart-bar')
+const cartItemPrice = document.querySelector('.cart-item-price')
+const cartInfoCont = document.querySelector('.cart-item-info')
+const cartItemName = document.querySelector('.cart-item-name')
+const cartItemExtra = document.querySelector('.cart-item-additions')
+const cartItemCont = document.querySelectorAll('.cart-item-container')
+const cartRemoveItem = document.getElementById('cart-remove-button')
+
+const toCartBtn = document.getElementById('add-to-cart-btn')
+
+// totalModalPrice <---- this is modal price variable
+
+// modalMainItemNum <---- this is modal main item amount variable
