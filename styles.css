@@ -150,6 +150,74 @@ nav::after {
     opacity: 1;
 }
 
+/* ----- CART ------- */
+
+.cart-item-container {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.fa-trash {
+    font-size: 1em;
+    color: #e93131;
+}
+
+.cart-item-remove {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 100%;
+    width: 10%;
+}
+
+.cart-item-number {
+    width: 10%;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.cart-item-name {
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-self: flex-start;
+}
+
+.cart-item-additions {
+    color: #656566;
+    text-overflow: ellipsis;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-self: flex-end;
+}
+
+.cart-item-additions {
+    font-size: .65em;
+    flex-wrap: wrap;
+}
+
+.cart-price {
+    width: 15%;
+}
+
+
+
+
+
 /* -------- MENU ------- */
 
 .waffles {
