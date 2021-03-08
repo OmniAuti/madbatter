@@ -123,7 +123,7 @@ function modalMenuImport(){
                 modalInfo.classList.add('modal-item')
                 modalInfo.innerHTML = 
                 `
-                <h3>${item.name}</h3>
+                <h3 class="modal-cart-capture">${item.name}</h3>
                 <p>${item.desc}</p>
                 `
 
@@ -239,12 +239,6 @@ function mainOrderSub() {
 // MOVING MODAL ITEM TO CART
 
 const cartBar = document.querySelector('.cart-bar')
-const cartItemPrice = document.querySelector('.cart-item-price')
-const cartInfoCont = document.querySelector('.cart-item-info')
-const cartItemName = document.querySelector('.cart-item-name')
-const cartItemExtra = document.querySelector('.cart-item-additions')
-const cartItemCont = document.querySelectorAll('.cart-item-container')
-const cartRemoveItem = document.getElementById('cart-remove-button')
 
 const toCartBtn = document.getElementById('add-to-cart-btn')
 
@@ -265,7 +259,9 @@ const modalCheckedPush = document.querySelectorAll('.modal-to-cart')
 
 function toCart() {
 
-    toCartArr.push(totalModalPrice.innerText, modalMainItemNum.value)
+    const cartItemName = document.querySelector('.modal-cart-capture')
+
+    toCartArr.push(totalModalPrice.innerText, modalMainItemNum.value, cartItemName.innerText)
 
    for (checkedBox of modalCheckedPush) {
         if (checkedBox.checked === true) {
@@ -277,22 +273,25 @@ function toCart() {
         }
     }
 
+   
+
     const exTotal = exStorage.join(', ')
 
     toCartArr.push(exTotal)
 
-     console.log(toCartArr)
-
      const cartItem = document.createElement('div')
      cartItem.classList.add('cart-item-container')
-     cartItem.innerHTML = `<button class="cart-item-remove" id="cart-remove-button"><i class="fas fa-trash"></i></button>
+     cartItem.innerHTML = `
+     
+     <i class="fas fa-trash cart-item-remove"></i>
      
      <div class="cart-item-number">${toCartArr[1]}<span>&times;</span></div>
      <div class="cart-item-info">
-             <span class="cart-item-name">The Original</span>
-             <span class="cart-item-additions">${toCartArr[2]}</span>
+             <span class="cart-item-name">${toCartArr[2]}</span>
+             <span class="cart-item-additions">${toCartArr[3]}</span>
      </div>
-         <div class="cart-item-price">$${toCartArr[0]}</div>`
+         <div class="cart-item-price">$${toCartArr[0]}</div>
+         `
      
      cartBar.appendChild(cartItem)
 
@@ -313,3 +312,15 @@ function emptyCartText() {
         cartEmpty.style.display = 'block'
     }
 }
+
+cartBar.addEventListener('click', function (e) {
+
+    if (e.target.classList.contains('cart-item-remove') || e.target.parentElement.classList.contains('cart-item-remove')) {
+        e.target.parentElement.remove()
+    }
+
+    emptyCartText()
+
+})
+ 
+
