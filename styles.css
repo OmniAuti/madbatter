@@ -185,7 +185,7 @@ nav::after {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 16px;
     color: #e93131;
     margin-left: 10px;
 }
@@ -209,8 +209,7 @@ nav::after {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    text-align: left;
-    
+    text-align: left;  
 }
 
 .cart-item-additions {
@@ -220,12 +219,9 @@ nav::after {
     overflow:hidden;
     text-align: left;
     white-space: nowrap;
+    font-size: 8px;
 }
 
-.cart-item-additions {
-    font-size: .65em;
-    flex-wrap: wrap;
-}
 
 .cart-price {
     width: 20%;
