@@ -3,9 +3,6 @@
 const nav = document.querySelector('nav')
 const hr = document.querySelector('hr')
 
-//array for menu price total
-let storedTotal = []
-
 //NAV BAR SCROLL FEATURE
 window.addEventListener('scroll', () => {
     const navTop = nav.getBoundingClientRect()
@@ -103,8 +100,7 @@ function modalMenuImport(){
                 let desc = e.target.parentElement.children[2].innerText
                 let price = e.target.parentElement.children[3].innerText
 
-                let finalPrice = price.slice(1).trim(' ')
-
+                let finalPrice = price.slice(1)
 
                 const item = {}
 
@@ -134,9 +130,7 @@ function modalMenuImport(){
                 const storedTotalvar = `${item.price}`
                 storedTotal.push(storedTotalvar)
 
-                totalModalPrice.innerText = `${item.price}`
-
-                
+                totalModalPrice.innerText = `${item.price}`  
 
             }
 
@@ -158,28 +152,33 @@ function updateModalPrice() {
             // GET EXTRA PRICE
 
                 let price = e.target.parentElement.lastElementChild.firstElementChild.textContent                
-                let pricePos = price.indexOf() + 2
-                let numPrice = parseFloat(price.slice(pricePos))
+                let numPrice = parseFloat(price.slice(1))
 
             // CART TOTAL
 
-                const total = parseFloat(totalModalPrice.innerText)
-                let numTotal = parseFloat(total)
+                let numTotal = parseFloat(totalModalPrice.innerText)
+
 
                // const numTotalCart = parseFloat(totalModalPrice.innerText)
                 //console.log(numTotalCart)
             // ADD/SUB CART TOTAL
 
             if (e.target.checked) {
-                totalModalPrice.innerText = `${numTotal + numPrice}`
+                const varAddPrice =`${numTotal + numPrice}`
+                const totalAdd = parseFloat(varAddPrice)
+                totalModalPrice.innerText = totalAdd.toFixed(2)
             } else {
-                totalModalPrice.innerText = `${numTotal - numPrice}`
+                const varSubPrice =`${numTotal - numPrice}`
+                let totalSub = parseFloat(varSubPrice)
+                totalModalPrice.innerText = totalSub.toFixed(2)
             }
 
-
-          
+        
         })
     }
+
+
+
 }
 
 updateModalPrice()
@@ -198,6 +197,9 @@ modalMainItemSubtract.addEventListener('click', mainOrderSub)
 
 let mainOrderNum = 1
 
+
+//array for menu price total
+let storedTotal = []
 
 function mainOrderAdd() {
 
@@ -269,11 +271,9 @@ function toCart() {
             const exValue = checkedBox.value
   
             exStorage.push(exValue)
-
+            
         }
     }
-
-   
 
     const exTotal = exStorage.join(', ')
 
@@ -303,13 +303,22 @@ closesModal()
 
 }
 
+
+// ADDING CHECKOUT BTN AND REMOVING EMPTY CART TEXT
+
+
 const cartEmpty = document.querySelector('.cart-empty-text')
+const checkoutBtn = document.querySelector('.checkout')
 
 function emptyCartText() {
-    if (cartBar.children.length > 1) {
-        cartEmpty.style.display = 'none'    }
+    if (cartBar.children.length > 2) {
+        cartBar.style.justifyContent = 'flex-start'
+        cartEmpty.style.display = 'none'    
+        checkoutBtn.style.display = 'block'   } 
     else {
+        cartBar.style.justifyContent = 'center'
         cartEmpty.style.display = 'block'
+        checkoutBtn.style.display = 'none'
     }
 }
 
@@ -322,5 +331,3 @@ cartBar.addEventListener('click', function (e) {
     emptyCartText()
 
 })
- 
-

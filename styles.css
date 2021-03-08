@@ -31,9 +31,24 @@ hr {
     justify-content: center;
     align-items: center;
     z-index: 2;
-    overflow:scroll;
 }
 
+.checkout {
+    position: absolute;
+    bottom: 50px;
+    padding: 1em 2.5em;
+    border-radius: 10px;
+    background-color: #ba6fb4;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15em;
+    display: none;
+}
+
+.checkout:hover {
+    background-color: #a757b5
+
+}
 
 
 
