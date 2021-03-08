@@ -11,25 +11,7 @@
 <body>
 
     <div class="cart-bar">
-
-        <div class="cart-item-container">
-
-            <button class="cart-item-remove" id="cart-remove-button"><i class="fas fa-trash"></i></button>
-
-            
-        <div class="cart-item-number">1<span>&times;</span></div>
-          
-
-        <div class="cart-item-info">
-            <span class="cart-item-name">The Original</span>
-            <span class="cart-item-additions">Maple, Whipped Cream, Bananas</span>
-        </div>
-
-        <div class="cart-item-price">$9.65</div>
-
-        </div>
-
-        <h2>Your Cart Is Empty</h2>
+        <h2 class="cart-empty-text">Your Cart Is Empty</h2>
     </div>
 
     <section class="hero">
@@ -65,23 +47,23 @@
                         <div class="free-syrup-flex">
                         
                             <div>
-                            <input checked="true" type="radio" name="free-syrup" value="maple" id="maple" class="free-checked">
+                            <input checked="true" type="radio" name="free-syrup" value="Maple Syrup" id="maple" class="free-checked modal-to-cart">
                             <label for="maple">Maple</label>
                             </div>
                             <div>
-                            <input type="radio" name="free-syrup" value="strawberry" id="strawberry" class="free-checked">
+                            <input type="radio" name="free-syrup" value="Strawberry Syrup" id="strawberry" class="free-checked modal-to-cart">
                             <label for="strawberry">Strawberry</label>
                             </div>
                             <div>
-                            <input type="radio" name="free-syrup" value="blueberry" id="blueberry" class="free-checked">
+                            <input type="radio" name="free-syrup" value="Blueberry Syrup" id="blueberry" class="free-checked modal-to-cart">
                             <label for="blueberry">Blueberry</label>
                             </div>
                             <div>
-                            <input type="radio" name="free-syrup" value="honey" id="honey" class="free-checked">
+                            <input type="radio" name="free-syrup" value="Honey" id="honey" class="free-checked modal-to-cart">
                             <label for="honey">Honey</label>
                             </div>
                             <div>
-                            <input type="radio" name="free-syrup" value="chocolate" id="chocolate" class="free-checked">
+                            <input type="radio" name="free-syrup" value="Chocolate Syrup" id="chocolate" class="free-checked modal-to-cart">
                             <label for="chocolate">Chocolate</label>
                             </div>
 
@@ -96,33 +78,33 @@
                             <div class="flex-modal-extra-items">
                                 <div>
 
-                                <input type="checkbox" name="extra-syrup" value="maple" id="extra-maple" class="check">
+                                <input type="checkbox" name="extra-syrup" value="Extra Maple Syrup" id="extra-maple" class="check modal-to-cart">
                                 <label for="extra-maple">Maple<p class="modal-extra-price">$0.50</p></label>
     
                                 </div>
                                 <div>
-                                <input type="checkbox" name="extra-syrup" value="strawberry" id="extra-strawberry" class="check">
+                                <input type="checkbox" name="extra-syrup" value="Extra Strawberry Syrup" id="extra-strawberry" class="check modal-to-cart">
                                 <label for="extra-strawberry">Strawberry<p class="modal-extra-price">$0.75</p></label>
           
                                 </div>
                                 <div>
-                                <input type="checkbox" name="extra-syrup" value="blueberry" id="extra-blueberry" class="check">
+                                <input type="checkbox" name="extra-syrup" value="Extra Blueberry Syrup" id="extra-blueberry" class="check modal-to-cart">
                                 <label for="extra-blueberry">Blueberry<p class="modal-extra-price">$0.75</p></label>
                                 
                                 </div>
                                 <div>
-                                <input type="checkbox" name="extra-syrup" value="honey" id="extra-honey" class="check">
+                                <input type="checkbox" name="extra-syrup" value="Extra Honey" id="extra-honey" class="check modal-to-cart">
                                 <label for="extra-honey">Honey<p class="modal-extra-price">$0.50</p></label>
                                 
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="extra-syrup" value="caramel" id="extra-caramel" class="check">
+                                    <input type="checkbox" name="extra-syrup" value="Extra Caramel" id="extra-caramel" class="check modal-to-cart">
                                     <label for="extra-caramel">Caramel<p class="modal-extra-price">$1.50</p></label>
                                     </div>
 
                                 <div>
-                                <input type="checkbox" name="extra-syrup" value="chocolate" id="extra-chocolate" class="check">
+                                <input type="checkbox" name="extra-syrup" value="Extra Chocolate Syrup" id="extra-chocolate" class="check modal-to-cart">
                                 <label for="extra-chocolate">Chocolate<p class="modal-extra-price">$1.25</p></label>
                                 </div>
 
@@ -137,38 +119,38 @@
 
                             <div class="flex-modal-extra-items">
                                 <div>
-                                <input type="checkbox" name="topping" value="banana" id="banana" class="check">
+                                <input type="checkbox" name="topping" value="Bananas" id="banana" class="check modal-to-cart">
                                 <label for="banana">Banana<p class="modal-extra-price">$1.15</p></label>
                  
                                 </div>
                                 <div>
-                                <input type="checkbox" name="berries" value="berries" id="berries" class="check">
+                                <input type="checkbox" name="berries" value="Mixed Berries" id="berries" class="check modal-to-cart">
                                 <label for="berries">Mixed Berries<p class="modal-extra-price">$2.00</p></label>
                                 
                                 </div>
                                 <div>
-                                <input type="checkbox" name="pecans" value="pecans" id="pecans" class="check">
+                                <input type="checkbox" name="pecans" value="Pecans" id="pecans" class="check modal-to-cart">
                                 <label for="pecans">Carmel Roasted Pecans<p class="modal-extra-price">$1.75</p></label>
                                 
                                 </div>
 
                                 <div>
-                                    <input type="checkbox" name="whippedcream" value="whippedcream" id="whippedcream" class="check">
+                                    <input type="checkbox" name="whippedcream" value="Whipped Cream" id="whippedcream" class="check modal-to-cart">
                                     <label for="whippedcream">Whipped Cream<p>$0.50</p></label>
                                     
                                     </div>
                                 <div>
-                                <input type="checkbox" name="powdered sugar" value="psugar" id="psugar" class="check">
+                                <input type="checkbox" name="powdered sugar" value="Powdered Sugar" id="psugar" class="check modal-to-cart">
                                 <label for="psugar">Powdered Sugar<p class="modal-extra-price">$0.50</p></label>
                                 
                                 </div>
                                 <div>
-                                    <input type="checkbox" name="Pbutter" value="Pbutter" id="Pbutter" class="check">
+                                    <input type="checkbox" name="Pbutter" value="Peanut Butter" id="Pbutter" class="check modal-to-cart">
                                     <label for="Pbutter">Peanut Butter<p>$1.25</p></label>
                                     
                                     </div>
                                 <div>
-                                <input type="checkbox" name="butter" value="butter" id="butter" class="free-checked">
+                                <input type="checkbox" name="butter" value="Butter" id="butter" class="free-checked modal-to-cart">
                                 <label for="butter">Butter<p>Free</p></label>
                                 
                                 </div>

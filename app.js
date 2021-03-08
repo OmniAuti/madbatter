@@ -39,23 +39,46 @@ modal.addEventListener('click', outsideModalClick)
 function opensModal() {
     modal.style.display = 'block'
 }
+
+
+const freeChecked = document.querySelectorAll('.free-checked')
+const mapleDefault = document.getElementById('maple')
+
  function closesModal() {
     modal.style.display = 'none'
-    clearCheckedBoxes()
     totalModalPrice.innerText = ''
     modalMainItemNum.value = 1
     mainOrderNum = 1
     storedTotal = []
+    toCartArr = []
+    exStorage = [] 
+
+    for (const checkedbox of checkbox) {
+        checkedbox.checked = false
+    }
+    for (const freeCheck of freeChecked) {
+        freeCheck.checked = false
+    }
+        mapleDefault.checked = true
  }
 
 function outsideModalClick(e) {
     if (e.target === modal) {
         modal.style.display = 'none'
-        clearCheckedBoxes()
         totalModalPrice.innerText = ''
         modalMainItemNum.value = 1
         mainOrderNum = 1
         storedTotal = []
+        toCartArr = []
+        exStorage = []
+    
+        for (const checkedbox of checkbox) {
+            checkedbox.checked = false
+        }
+        for (const freeCheck of freeChecked) {
+            freeCheck.checked = false
+        }
+            mapleDefault.checked = true
     }
 }
 
@@ -161,23 +184,6 @@ function updateModalPrice() {
 
 updateModalPrice()
 
-
-//clear checked boxes
-
-function clearCheckedBoxes() {
-
-    const freeChecked = document.querySelectorAll('.free-checked')
-    const mapleDefault = document.getElementById('maple')
-
-    for (const checkedbox of checkbox) {
-        checkedbox.checked = false
-    }
-    for (const freeCheck of freeChecked) {
-        freeCheck.checked = false
-    }
-        mapleDefault.checked = true
-}
-
 // MODAL ITEM ADD or SUB main menu item
 
 const modalMainItemAdd = document.getElementById('plus-main-order')
@@ -242,6 +248,68 @@ const cartRemoveItem = document.getElementById('cart-remove-button')
 
 const toCartBtn = document.getElementById('add-to-cart-btn')
 
+
 // totalModalPrice <---- this is modal price variable
 
 // modalMainItemNum <---- this is modal main item amount variable
+
+// checkbox <---- this is checkbox variable
+
+let toCartArr = []
+let exStorage = []
+
+toCartBtn.addEventListener('click', toCart) 
+
+
+const modalCheckedPush = document.querySelectorAll('.modal-to-cart')
+
+function toCart() {
+
+    toCartArr.push(totalModalPrice.innerText, modalMainItemNum.value)
+
+   for (checkedBox of modalCheckedPush) {
+        if (checkedBox.checked === true) {
+
+            const exValue = checkedBox.value
+  
+            exStorage.push(exValue)
+
+        }
+    }
+
+    const exTotal = exStorage.join(', ')
+
+    toCartArr.push(exTotal)
+
+     console.log(toCartArr)
+
+     const cartItem = document.createElement('div')
+     cartItem.classList.add('cart-item-container')
+     cartItem.innerHTML = `<button class="cart-item-remove" id="cart-remove-button"><i class="fas fa-trash"></i></button>
+     
+     <div class="cart-item-number">${toCartArr[1]}<span>&times;</span></div>
+     <div class="cart-item-info">
+             <span class="cart-item-name">The Original</span>
+             <span class="cart-item-additions">${toCartArr[2]}</span>
+     </div>
+         <div class="cart-item-price">$${toCartArr[0]}</div>`
+     
+     cartBar.appendChild(cartItem)
+
+toCartArr = []
+exStorage = []
+
+emptyCartText()
+closesModal()
+
+}
+
+const cartEmpty = document.querySelector('.cart-empty-text')
+
+function emptyCartText() {
+    if (cartBar.children.length > 1) {
+        cartEmpty.style.display = 'none'    }
+    else {
+        cartEmpty.style.display = 'block'
+    }
+}

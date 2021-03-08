@@ -28,9 +28,10 @@ hr {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     z-index: 2;
+    overflow:scroll;
 }
 
 
@@ -183,9 +184,10 @@ nav::after {
 .cart-item-info {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 50%;
+    height: 100%;
     text-align: left;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .cart-item-name {
@@ -193,16 +195,14 @@ nav::after {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    justify-self: flex-start;
 }
 
 .cart-item-additions {
     color: #656566;
     text-overflow: ellipsis;
     width: 100%;
-    overflow: hidden;
+    overflow:hidden;
     white-space: nowrap;
-    justify-self: flex-end;
 }
 
 .cart-item-additions {
