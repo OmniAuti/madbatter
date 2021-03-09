@@ -344,6 +344,7 @@ input,
 .flexed-modal-item {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     margin: 5px;
 }
 
@@ -358,7 +359,7 @@ input,
     .toppings div,
          .avacado-flex div,
              .coffee-options, 
-                .tea-options,
+                .tea-options
                      {
     margin: 5px;
 }
