@@ -11,9 +11,11 @@
 <body>
     
         <div class="cart-bar">
+            <div class="cart-bar-cont"></div>
             
-        <h2 class="cart-empty-text">Your Cart Is Empty</h2>
+            <h2 class="cart-empty-text">Your Cart Is Empty</h2>
             <button id="checkout" class="checkout">Checkout</button>
+
         </div>
 
 
@@ -42,34 +44,35 @@
 
                 <hr>
 
-                <div class="customize-order">
-                   
-                        
-                        <h3>Choose Syrup</h3>
+                    <div class="customize-order">
 
-                        <div class="free-syrup-flex">
-                        
-                            <div>
-                            <input checked="true" type="radio" name="free-syrup" value="Maple Syrup" id="maple" class="free-checked modal-to-cart">
-                            <label for="maple">Maple</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="free-syrup" value="Strawberry Syrup" id="strawberry" class="free-checked modal-to-cart">
-                            <label for="strawberry">Strawberry</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="free-syrup" value="Blueberry Syrup" id="blueberry" class="free-checked modal-to-cart">
-                            <label for="blueberry">Blueberry</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="free-syrup" value="Honey" id="honey" class="free-checked modal-to-cart">
-                            <label for="honey">Honey</label>
-                            </div>
-                            <div>
-                            <input type="radio" name="free-syrup" value="Chocolate Syrup" id="chocolate" class="free-checked modal-to-cart">
-                            <label for="chocolate">Chocolate</label>
-                            </div>
+                        <div class="free-syrups">
+                            <h3>Choose Syrup</h3>
 
+                            <div class="free-syrup-flex">
+                            
+                                <div>
+                                <input checked="true" type="radio" name="free-syrup" value="Maple Syrup" id="maple" class="free-checked modal-to-cart">
+                                <label for="maple">Maple</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="free-syrup" value="Strawberry Syrup" id="strawberry" class="free-checked modal-to-cart">
+                                <label for="strawberry">Strawberry</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="free-syrup" value="Blueberry Syrup" id="blueberry" class="free-checked modal-to-cart">
+                                <label for="blueberry">Blueberry</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="free-syrup" value="Honey" id="honey" class="free-checked modal-to-cart">
+                                <label for="honey">Honey</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="free-syrup" value="Chocolate Syrup" id="chocolate" class="free-checked modal-to-cart">
+                                <label for="chocolate">Chocolate</label>
+                                </div>
+
+                            </div>
                         </div>
 
                      <hr>
@@ -99,7 +102,8 @@
                                     <input type="checkbox" name="whippedcream" value="Whipped Cream" id="whippedcream" class="check modal-to-cart">
                                     <label for="whippedcream">Whipped Cream<p>$0.50</p></label>
                                     
-                                    </div>
+                                </div>
+
                                 <div>
                                 <input type="checkbox" name="powdered sugar" value="Powdered Sugar" id="psugar" class="check modal-to-cart">
                                 <label for="psugar">Powdered Sugar<p class="modal-extra-price">$0.50</p></label>
@@ -119,7 +123,7 @@
                             </div>
                         </div>
 
-                    <hr>
+                     <hr>
 
                         <div class="extra-syrup">
 
@@ -148,10 +152,10 @@
                                 
                                 </div>
 
-                                <div>
-                                    <input type="checkbox" name="extra-syrup" value="Extra Caramel" id="extra-caramel" class="check modal-to-cart">
-                                    <label for="extra-caramel">Caramel<p class="modal-extra-price">$1.50</p></label>
-                                    </div>
+                                 <div>
+                                 <input type="checkbox" name="extra-syrup" value="Extra Caramel" id="extra-caramel" class="check modal-to-cart">
+                                 <label for="extra-caramel">Caramel<p class="modal-extra-price">$1.50</p></label>
+                                 </div>
 
                                 <div>
                                 <input type="checkbox" name="extra-syrup" value="Extra Chocolate Syrup" id="extra-chocolate" class="check modal-to-cart">
@@ -160,6 +164,248 @@
 
                             </div>
                         </div>
+                        
+                    </div>
+
+                        <div class="sides-modal">
+
+                            <div class="eggs-flex">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="eggs" value="Scrambled" id="scrambled" class="free-checked modal-to-cart">
+                                <label for="scrambled">Scrambled</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="eggs" value="Over Easy" id="over-easy" class="free-checked modal-to-cart">
+                                <label for="over-easy">Over Easy</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="eggs" value="Sunny Side Up" id="sunny-up" class="free-checked modal-to-cart">
+                                <label for="sunny-up">Sunny Side Up</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="eggs" value="Poached" id="poached" class="free-checked modal-to-cart">
+                                <label for="poached">Poached</label>
+                                </div>
+
+                            </div>
+
+                            <div class="potato-flex">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="potatoes" value="Hashbrowns" id="hasbrowns" class="free-checked modal-to-cart">
+                                <label for="hashbrowns">Hashbrowns</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="potatoes" value="Skillet Veggie Mix" id="skillet" class="free-checked modal-to-cart">
+                                <label for="skillet">Skillet Vegetable Mix</label>
+                                </div>
+                                
+
+                            </div>
+
+                            <div class="meat-flex">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="meat" value="Bacon" id="bacon" class="free-checked modal-to-cart">
+                                <label for="bacon">Bacon</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="meat" value="Sausage Links" id="sausage-links" class="free-checked modal-to-cart">
+                                <label for="sausage-links">Sausage Links</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="meat" value="Sausage Patties" id="sausage-pat" class="free-checked modal-to-cart">
+                                <label for="sausage-pat">Sausage Patties</label>
+                                </div>
+                                
+                            </div>
+
+                            
+
+                                <div class="avacado-flex">
+
+                                        <div>
+                                            <input type="checkbox" name="avacado-toast-t" value="With Tomato" id="t-avo" class="check modal-to-cart">
+                                            <label for="t-avo">With Tomato<p class="modal-extra-price">$1.00</p></label>                                   
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="avacado-toast-e" value="With Egg" id="e-avo" class="check modal-to-cart">
+                                            <label for="e-avo">With Poached Egg<p class="modal-extra-price">$2.00</p></label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" name="avacado-toast-b" value="With Bacon" id="b-avo" class="check modal-to-cart">
+                                            <label for="b-avo">With Bacon<p>$2.50</p></label>
+                                        </div>
+                                </div>
+
+                            
+
+                        </div>
+
+                        <div class="drinks-modal">
+
+                            <div class="coffee-cont">
+
+                                    <div class="coffee-flex">
+                                        <div>
+                                        <input checked="true" type="radio" name="coffee" value="Black" id="black-coffee" class="free-checked modal-to-cart">
+                                        <label for="black-coffee">Black</label>
+                                        </div>
+                                        <div>
+                                        <input type="radio" name="coffee" value="Cream" id="creamer" class="free-checked modal-to-cart">
+                                        <label for="creamer">Creamer</label>
+                                        </div>
+                                        <div>
+                                        <input type="radio" name="coffee" value="Almond Milk" id="almond-milk-creamer" class="free-checked modal-to-cart">
+                                        <label for="almond-milk-creamer">Almond Milk</label>
+                                        </div>
+                                        
+                                    </div>
+
+                                <hr>
+
+                                <div class="coffee-options">
+
+                                        <div>
+                                        <input type="checkbox" name="coffee-extras" value="Iced" id="iced-coffee" class="free-checked modal-to-cart">
+                                        <label for="iced-coffee">Iced<p class="modal-extra-price">Free</p></label>
+                                        </div>
+
+                                        <div>
+                                        <input type="checkbox" name="coffee-extras" value="Sugar" id="sugar" class="free-checked modal-to-cart">
+                                        <label for="sugar">Sugar<p class="modal-extra-price">Free</p></label>
+                                        </div>
+        
+                                        <div>
+                                        <input type="checkbox" name="coffee-extras" value="Whipped Cream" id="whipped-cream" class="free-checked modal-to-cart">
+                                        <label for="whipped-cream">Whipped Cream<p class="modal-extra-price">Free</p></label>
+                                        </div>
+
+                                        <div>
+                                        <input type="checkbox" name="coffee-extras" value="Cinnamon" id="cinnamon-coffee" class="free-checked modal-to-cart">
+                                        <label for="cinnamon-coffee">Cinnamon<p class="modal-extra-price">Free</p></label>
+                                        </div>
+                                 
+                                </div>
+                                 
+                            </div>
+
+                            <div class="tea-cont">
+
+                                    <div class="tea-flex">
+                                        
+                                        <div>
+                                        <input checked="true" type="radio" name="tea" value="Green" id="green-t" class="free-checked modal-to-cart">
+                                        <label for="green-t">Green</label>
+                                        </div>
+
+                                        <div>
+                                        <input type="radio" name="tea" value="Black" id="black-t" class="free-checked modal-to-cart">
+                                        <label for="black-t">Black</label>
+                                        </div>
+
+                                        <div>
+                                        <input type="radio" name="tea" value="Earl Grey" id="earl-t" class="free-checked modal-to-cart">
+                                        <label for="earl-t">Earl Grey</label>
+                                        </div>
+
+                                        <div>
+                                        <input type="radio" name="tea" value="Herbal" id="herbal-t" class="free-checked modal-to-cart">
+                                        <label for="herbal-t">Herbal</label>
+                                        </div>
+
+                                        <div>
+                                        <input type="radio" name="tea" value="Chai" id="chai-t" class="free-checked modal-to-cart">
+                                        <label for="chai-t">Chai</label>
+                                        </div>
+
+                                    </div>
+
+                                    <hr>
+
+                                        <div class="tea-options">
+
+                                            <div>
+                                            <input type="checkbox" name="tea-extras" value="Iced" id="tea-iced" class="free-checked modal-to-cart">
+                                            <label for="tea-iced">Iced<p class="modal-extra-price">Free</p></label>
+                                            </div>
+
+                                            <div>
+                                            <input type="checkbox" name="tea-extras" value="Sugar" id="tea-sugar" class="free-checked modal-to-cart">
+                                            <label for="tea-sugar">Sugar<p class="modal-extra-price">Free</p></label>
+                                            </div>
+            
+                                            <div>
+                                            <input type="checkbox" name="tea-extras" value="Honey" id="tea-honey" class="free-checked modal-to-cart">
+                                            <label for="tea-honey">Honey<p class="modal-extra-price">Free</p></label>
+                                            </div>
+
+                                            <div>
+                                            <input type="checkbox" name="tea-extras" value="Milk" id="tea-milk" class="free-checked modal-to-cart">
+                                            <label for="tea-milk">Milk<p class="modal-extra-price">Free</p></label>
+                                            </div>
+
+                                        </div>
+                            </div> 
+
+                            <div class="juice-flex">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="juice" value="Orange" id="orange" class="free-checked modal-to-cart">
+                                <label for="orange">Orange</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="juice" value="Apple" id="apple" class="free-checked modal-to-cart">
+                                <label for="apple">Apple</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="juice" value="Mango" id="mango" class="free-checked modal-to-cart">
+                                <label for="mango">Mango</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="juice" value="Pineapple" id="pineapple" class="free-checked modal-to-cart">
+                                <label for="pineapple">Pineapple</label>
+                                </div>
+                                
+                            </div>
+
+                            <div class="milk-flex">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="milk" value="Plain" id="milk-p" class="free-checked modal-to-cart">
+                                <label for="milk-p">Plain</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="milk" value="Chocolate" id="milk-c" class="free-checked modal-to-cart">
+                                <label for="milk-c">Chocolate</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="milk" value="Strawberry" id="milk-s" class="free-checked modal-to-cart">
+                                <label for="milk-s">Strawberry</label>
+                                </div>
+                                
+                            </div>
+
+                            <div class="almond-milk-flex">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="almond-milk" value="Plain" id="almond-milk-p" class="free-checked modal-to-cart">
+                                <label for="almond-milk-p">Plain</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="almond-milk" value="Chocolate" id="almond-milk-c" class="free-checked modal-to-cart">
+                                <label for="almond-milk-c">Chocolate</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="almond-milk" value="Strawberry" id="almond-milk-s" class="free-checked modal-to-cart">
+                                <label for="almond-milk-s">Strawberry</label>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
 
                         <hr>
 
@@ -173,10 +419,12 @@
 
                         <button class="add-to-cart-btn" id="add-to-cart-btn">Add To Cart</button>
                         <p class="modal-total" style="text-decoration: underline;">Total: $<span class="final-total-modal"></span></p>
+
                         </div>
-                </div>
-            </div> 
-        </div>
+                    
+
+        </div> 
+    </div>
   
     <section class="waffles" id="waffles">
 
@@ -309,32 +557,32 @@
 
         <h2 class="menu">Sides</h2>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container egg"  id="modal-open">
             <img class="item-picture" src="https://cdn-prod.medicalnewstoday.com/content/images/articles/283/283659/a-basket-of-eggs.jpg" alt="eggs">
             <h3 class="item-name">Eggs</h3>
-            <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
-            <h3 class="item-price">$5.75</h3>
-        </div>
-
-        <div class="menu-item-container">
-            <img class="item-picture" src="https://cdn77-s3.lazycatkitchen.com/wp-content/uploads/2020/11/sweet-potato-hash-browns-plate-800x1200.jpg" alt="hash browns">
-            <h3 class="item-name">Hash Browns</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
             <h3 class="item-price">$5.00</h3>
         </div>
 
-        <div class="menu-item-container">
-            <img class="item-picture" src="https://cdn.apartmenttherapy.info/image/upload/v1582754371/k/Photo/Series/2020-03-Skills-Battle-Update-How-to-Cook-Bacon/2020-02_Skills-Battle-Update-How-to-Cook-Bacon_095.jpg" alt="bacon">
-            <h3 class="item-name">Bacon</h3>
+        <div class="menu-item-container potatoes"  id="modal-open">
+            <img class="item-picture" src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://timeincsecure-a.akamaihd.net/rtmp_uds/1260616200/201902/3477/1260616200_5997554272001_5997545713001-vs.jpg?pubId=1260616200&videoId=5997545713001&w=1280&h=720&q=90&c=cc" alt="potatoes">
+            <h3 class="item-name">Potatoes</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
-            <h3 class="item-price">$4.00</h3>
+            <h3 class="item-price">$3.50</h3>
         </div>
 
-        <div class="menu-item-container">
-            <img class="item-picture" src="https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways.jpeg" alt="avocado toast">
-            <h3 class="item-name">Millennial Bank Breaker</h3>
+        <div class="menu-item-container meat"  id="modal-open">
+            <img class="item-picture" src="https://cdn1.wolfermans.com/wcsstore/Wolfermans/images/catalog/15_50849_75c_01e_v01x.jpg" alt="breakfast meats">
+            <h3 class="item-name">Meat</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
-            <h3 class="item-price">$15.00</h3>
+            <h3 class="item-price">$4.25</h3>
+        </div>
+
+        <div class="menu-item-container avacado-toast"  id="modal-open">
+            <img class="item-picture" src="https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways.jpeg" alt="avocado toast">
+            <h3 class="item-name">The Millennial Bank Breaker</h3>
+            <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
+            <h3 class="item-price">$10.00</h3>
         </div>
         
     </section>
@@ -342,35 +590,35 @@
 
         <h2 class="menu">Drinks</h2>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container coffee" id="modal-open">
             <img class="item-picture" src="https://img1.mashed.com/img/gallery/coffee-mistakes-youre-probably-making-at-home/intro-1594766282.jpg" alt="coffee">
             <h3 class="item-name">Coffee</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
             <h3 class="item-price">$2.50</h3>
         </div>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container tea" id="modal-open">
             <img class="item-picture" src="https://static.toiimg.com/thumb/69385334.cms?width=680&height=512&imgsize=191579" alt="tea">
             <h3 class="item-name">Tea</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
             <h3 class="item-price">$2.50</h3>
         </div>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container juice" id="modal-open">
             <img class="item-picture" src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/orange-juice-1296x728-feature.jpg?w=1155&h=1528" alt="orange juice">
-            <h3 class="item-name">Fresh Orange Juice</h3>
+            <h3 class="item-name">Fresh Squeezed Juice</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
             <h3 class="item-price">$3.75</h3>
         </div>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container milk" id="modal-open">
             <img class="item-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhIAOr82HRDxDj3GDumI1HN3i4mw7haKckQ&usqp=CAU" alt="milk">
             <h3 class="item-name">Milk</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>
             <h3 class="item-price">$2.00</h3>
         </div>
 
-        <div class="menu-item-container">
+        <div class="menu-item-container almond-milk" id="modal-open">
             <img class="item-picture" src="https://40aprons.com/wp-content/uploads/2019/07/how-to-make-almond-milk-2.jpg" alt="almond milk">
             <h3 class="item-name">Almond Milk</h3>
             <p class="item-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit sapiente eius inventore veritatis, provident dolorem libero.</p>

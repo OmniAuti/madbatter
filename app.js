@@ -88,6 +88,8 @@ function modalMenuImport(){
            
             if (e.target.parentElement.classList.contains('menu-item-container')) {
 
+                
+            
                 //get menu item pic and find the source
                 let itemPic = e.target.parentElement.children[0].src
 
@@ -130,7 +132,214 @@ function modalMenuImport(){
                 const storedTotalvar = `${item.price}`
                 storedTotal.push(storedTotalvar)
 
-                totalModalPrice.innerText = `${item.price}`  
+                totalModalPrice.innerText = `${item.price}` 
+                
+// SIDES MODAL MENU
+
+                const removeModalExtraS = document.querySelector('.customize-order')
+                const sidesModal = document.querySelector('.sides-modal')
+
+                const eggModal = document.querySelector('.eggs-flex')
+                const potatoModal = document.querySelector('.potato-flex')
+                const meatModal = document.querySelector('.meat-flex')
+                const avoModal = document.querySelector('.avacado-flex')
+                
+
+                const scrambled = document.getElementById('scrambled')
+                const hashbrowns = document.getElementById('hasbrowns')
+                const bacon = document.getElementById('bacon')
+
+// drinks Modal menu
+
+                const drinkModal = document.querySelector('.drinks-modal')
+
+                const almondModal = document.querySelector('.almond-milk-flex')
+                const milkModal = document.querySelector('.milk-flex')
+                const juiceModal = document.querySelector('.juice-flex')
+                const teaModal = document.querySelector('.tea-cont')
+                const coffeeModal = document.querySelector('.coffee-cont')
+
+                const almondP = document.getElementById('almond-milk-p')
+                const milkP = document.getElementById('milk-p')
+                const juiceO = document.getElementById('orange')
+                const teaG = document.getElementById('green-t')
+                const coffeeB = document.getElementById('black-coffee')
+
+
+
+                if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('egg')) {
+                    sidesModal.style.display = 'block'
+                    eggModal.style.display = 'flex'
+
+                    potatoModal.style.display = 'none'
+                    avoModal.style.display = 'none'
+                    meatModal.style.display = 'none'
+
+                    removeModalExtraS.style.display = 'none'
+                    drinksModal.style.display = 'none'
+                    
+
+                    scrambled.checked = true
+                    mapleDefault.checked = false
+                    bacon.checked = false
+                    hashbrowns.checked = false
+                    
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('potatoes')) {
+
+                    sidesModal.style.display = 'block'
+                    potatoModal.style.display = 'flex'
+
+                    eggModal.style.display = 'none'
+                    meatModal.style.display = 'none'
+                    avoModal.style.display = 'none'
+
+                    removeModalExtraS.style.display = 'none'
+                    drinksModal.style.display = 'none'
+                    
+
+                    hashbrowns.checked = true
+                    mapleDefault.checked = false
+                    bacon.checked = false
+                    scrambled.checked = false
+                   
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('meat')) {
+                    sidesModal.style.display = 'block'
+                    
+
+                    meatModal.style.display = 'flex'
+                    eggModal.style.display = 'none'
+                    potatoModal.style.display = 'none'
+                    avoModal.style.display = 'none'
+
+                    removeModalExtraS.style.display = 'none'
+                    drinkModal.style.display = 'none'
+                    
+
+                    bacon.checked = true
+                    mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('avacado-toast')) {
+                    sidesModal.style.display = 'block'
+                    avoModal.style.display = 'block'
+
+                    meatModal.style.display = 'none'
+                    eggModal.style.display = 'none'
+                    potatoModal.style.display = 'none'
+
+                    drinkModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('almond-milk')) {
+                    drinkModal.style.display = 'block'
+                    almondModal.style.display = 'flex'
+
+                    coffeeModal.style.display = 'none'
+                    juiceModal.style.display = 'none'
+                    milkModal.style.display = 'none'
+                    teaModal.style.display = 'none'
+
+                    sidesModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    almondP.checked = true
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
+                    mapleDefault.checked = false
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('milk')) {
+                    drinkModal.style.display = 'block'
+                    milkModal.style.display = 'flex'
+
+                    coffeeModal.style.display = 'none'
+                    juiceModal.style.display = 'none'
+                    almondModal.style.display = 'none'
+                    teaModal.style.display = 'none'
+
+                    sidesModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    milkP.checked = true
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    almondP.checked = false
+                    mapleDefault.checked = false
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('juice')) {
+                    drinkModal.style.display = 'block'
+                    juiceModal.style.display = 'flex'
+
+                    coffeeModal.style.display = 'none'
+                    milkModal.style.display = 'none'
+                    almondModal.style.display = 'none'
+                    teaModal.style.display = 'none'
+
+                    sidesModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    juiceO.checked = true
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    milkP.checked = false
+                    almondP.checked = false
+                    mapleDefault.checked = false
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('tea')) {
+                    drinkModal.style.display = 'block'
+                    teaModal.style.display = 'block'
+
+                    coffeeModal.style.display = 'none'
+                    juiceModal.style.display = 'none'
+                    milkModal.style.display = 'none'
+                    almondModal.style.display = 'none'
+
+                    sidesModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    teaG.checked = true
+                    coffeeB.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
+                    almondP.checked = false
+                    mapleDefault.checked = false
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('coffee')) {
+                    drinkModal.style.display = 'block'
+                    coffeeModal.style.display = 'block'
+
+                    teaModal.style.display = 'none'
+                    juiceModal.style.display = 'none'
+                    milkModal.style.display = 'none'
+                    almondModal.style.display = 'none'
+
+                    sidesModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    coffeeB.checked = true
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
+                    almondP.checked = false
+                    mapleDefault.checked = false
+
+                } else {
+                    removeModalExtraS.style.display = 'block'
+                    sidesModal.style.display = 'none'
+                    drinksModal.style.display = 'none'
+                    mapleDefault.checked = true
+                }
+
+
 
             }
 
@@ -242,6 +451,8 @@ function mainOrderSub() {
 
 const cartBar = document.querySelector('.cart-bar')
 
+const cartBarCont = document.querySelector('.cart-bar-cont')
+
 const toCartBtn = document.getElementById('add-to-cart-btn')
 
 
@@ -293,7 +504,7 @@ function toCart() {
          <div class="cart-item-price">$${toCartArr[0]}</div>
          `
      
-     cartBar.appendChild(cartItem)
+         cartBarCont.appendChild(cartItem)
 
 toCartArr = []
 exStorage = []
@@ -311,14 +522,16 @@ const cartEmpty = document.querySelector('.cart-empty-text')
 const checkoutBtn = document.querySelector('.checkout')
 
 function emptyCartText() {
-    if (cartBar.children.length > 2) {
+    if (cartBarCont.children.length > 0) {
         cartBar.style.justifyContent = 'flex-start'
         cartEmpty.style.display = 'none'    
-        checkoutBtn.style.display = 'block'   } 
-    else {
+        checkoutBtn.style.display = 'block'
+        cartBarCont.style.display = 'block'
+       } else {
         cartBar.style.justifyContent = 'center'
         cartEmpty.style.display = 'block'
         checkoutBtn.style.display = 'none'
+        cartBarCont.style.display = 'none'
     }
 }
 
