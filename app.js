@@ -176,7 +176,7 @@ function modalMenuImport(){
                     meatModal.style.display = 'none'
 
                     removeModalExtraS.style.display = 'none'
-                    drinksModal.style.display = 'none'
+                    drinkModal.style.display = 'none'
                     
 
                     scrambled.checked = true
@@ -194,7 +194,7 @@ function modalMenuImport(){
                     avoModal.style.display = 'none'
 
                     removeModalExtraS.style.display = 'none'
-                    drinksModal.style.display = 'none'
+                    drinkModal.style.display = 'none'
                     
 
                     hashbrowns.checked = true
