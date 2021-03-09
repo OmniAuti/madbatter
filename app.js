@@ -337,6 +337,15 @@ function modalMenuImport(){
                     sidesModal.style.display = 'none'
                     drinkModal.style.display = 'none'
                     mapleDefault.checked = true
+
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
+                    almondP.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
                 }
 
 
