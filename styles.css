@@ -340,16 +340,11 @@ input,
     cursor: pointer;
     margin: 1px;
 }
-
-.free-syrup-flex,
-    .eggs-flex,
-        .potato-flex,
-            .meat-flex,
-                .almond-milk-flex,
-                    .milk-flex, .juice-flex, .tea-flex, .coffee-flex
-                        {
+     
+.flexed-modal-item {
     display: flex;
     justify-content: space-evenly;
+    margin: 5px;
 }
 
 .flex-modal-extra-items p,
@@ -361,15 +356,10 @@ input,
 
 .extra-syrup div,
     .toppings div,
-        .free-syrup-flex,
-            .eggs-flex,
-                .meat-flex,
-                    .potato-flex,
-                        .avacado-flex div,
-                            .almond-milk-flex,
-                                .milk-flex,
-                                    .juice-flex, .tea-flex, .coffee-flex, .coffee-options, .tea-options
-          {
+         .avacado-flex div,
+             .coffee-options, 
+                .tea-options,
+                     {
     margin: 5px;
 }
 

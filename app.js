@@ -139,10 +139,10 @@ function modalMenuImport(){
                 const removeModalExtraS = document.querySelector('.customize-order')
                 const sidesModal = document.querySelector('.sides-modal')
 
-                const eggModal = document.querySelector('.eggs-flex')
-                const potatoModal = document.querySelector('.potato-flex')
-                const meatModal = document.querySelector('.meat-flex')
-                const avoModal = document.querySelector('.avacado-flex')
+                const eggModal = document.querySelector('.egg-items')
+                const potatoModal = document.querySelector('.potato-items')
+                const meatModal = document.querySelector('.meat-items')
+                const avoModal = document.querySelector('.avo-items')
                 
 
                 const scrambled = document.getElementById('scrambled')
@@ -151,11 +151,11 @@ function modalMenuImport(){
 
 // drinks Modal menu
 
-                const drinkModal = document.querySelector('.drinks-modal')
+                const drinkModal = document.querySelector('.drink-modal')
 
-                const almondModal = document.querySelector('.almond-milk-flex')
-                const milkModal = document.querySelector('.milk-flex')
-                const juiceModal = document.querySelector('.juice-flex')
+                const almondModal = document.querySelector('.almond-milk-items')
+                const milkModal = document.querySelector('.milk-items')
+                const juiceModal = document.querySelector('.juice-items')
                 const teaModal = document.querySelector('.tea-cont')
                 const coffeeModal = document.querySelector('.coffee-cont')
 
@@ -335,7 +335,7 @@ function modalMenuImport(){
                 } else {
                     removeModalExtraS.style.display = 'block'
                     sidesModal.style.display = 'none'
-                    drinksModal.style.display = 'none'
+                    drinkModal.style.display = 'none'
                     mapleDefault.checked = true
                 }
 
