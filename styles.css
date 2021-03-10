@@ -272,30 +272,35 @@ nav::after {
     border-radius: 5px 0px 0px 5px;
     object-fit: cover;
     object-position: center;
-    margin-right: 10px;
+}
+
+.item-picture::after,
+    .item-picture::before {
+    display: table;
+    content: '';
+    clear: both;
 }
 
 .item-name {
-   padding: 5px 5px 5px 0px;
+   padding: 5px 5px 5px 10px;
    white-space: nowrap;
    text-overflow: ellipsis;
    overflow: hidden;
+   height: 40px;
 }
 
 .item-description {
-   max-height: 100px;
    overflow: hidden;
-   padding: 5px 10px 5px 0px;
+   padding: 0px 10px 0px 10px;
    display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical; 
+    height: 75px;
 }
 
 .item-price {
-    position: absolute;
-    bottom: 5px;
-    left: 160px;
-    padding: 5px 5px 2.5px 0px;
+    height: 35px;
+    padding-left: 160px;
 }
 
 /* -------- MODAL -------- */
