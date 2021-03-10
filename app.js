@@ -428,13 +428,17 @@ function mainOrderAdd() {
     const total = totalModalPrice.innerText
     const numTotal = parseFloat(total)
     const storedTotalNum = parseFloat(storedTotal[0])
-    
-   totalModalPrice.innerText = `${numTotal + storedTotalNum}`
+
+    const addO = `${numTotal + storedTotalNum}`
+    let addN = parseFloat(addO)
+    totalModalPrice.innerText = addN.toFixed(2)
 
    if (mainOrderNum > 1) {
     modalMainItemSubtract.disabled = false
    }
 }
+
+
 
 function mainOrderSub() {
 
@@ -451,7 +455,9 @@ function mainOrderSub() {
     const numTotal = parseFloat(total)
     const storedTotalNum = parseFloat(storedTotal[0])
 
-   totalModalPrice.innerText = `${numTotal - storedTotalNum}`
+    const addO = `${numTotal - storedTotalNum}`
+    let addN = parseFloat(addO)
+    totalModalPrice.innerText = addN.toFixed(2)
 
 }
 
