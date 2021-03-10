@@ -276,17 +276,26 @@ nav::after {
 }
 
 .item-name {
-   padding: 5px;
+   padding: 5px 5px 5px 0px;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow: hidden;
 }
 
 .item-description {
-    padding: 5px;
+   max-height: 100px;
+   overflow: hidden;
+   padding: 5px 10px 5px 0px;
+   display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
 }
 
 .item-price {
-    bottom: 10px;
+    position: absolute;
+    bottom: 5px;
     left: 160px;
-    padding: 13px;
+    padding: 5px 5px 2.5px 0px;
 }
 
 /* -------- MODAL -------- */
