@@ -68,9 +68,9 @@ hr {
 /* --------- HERO ------------- */
 
 .hero {
-    margin-top: 50px;
+    margin-top: 45px;
     width: calc(100vw - 250px);
-    height: 475px;
+    height: calc(100vh - 175px);
     background-image: url('img/hero-1.jpeg');
     background-size:auto;
     background-position: center;
