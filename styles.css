@@ -5,6 +5,10 @@
     font-family: 'Shippori Mincho B1', serif;
 }
 
+body {
+    background-color: #f7f7f7;
+}
+
 
 a {
     text-decoration: none;
@@ -30,7 +34,7 @@ hr {
     height: 100vh;
     border-left: 1px solid #000;
     width: 250px;
-    background-color: #fff;
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,7 +53,7 @@ hr {
 .checkout {
     position: absolute;
     bottom: 50px;
-    padding: 1em 2.5em;
+    padding: 1em 0em;
     border-radius: 10px;
     background-color: #ba6fb4;
     border: none;
@@ -59,8 +63,12 @@ hr {
 }
 
 .checkout:hover {
-    background-color: #a757b5
+    background-color: #a757b5;
 
+}
+
+.checkout a {
+    padding: 1em 2.5em;
 }
 
 
@@ -93,7 +101,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border-radius: 30%;
     z-index: 1;
 }
@@ -108,13 +116,13 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border-radius: 30% 30% 0% 0%;
     border: 1px solid black;
 }
 
 .logo h5 {
-    color: #fff;
+    color: #f7f7f7;
     text-shadow: 0px 0px 1px #000;
     text-align: center;
     text-shadow: 0px 0px 5px #ba6fb4;
@@ -137,7 +145,7 @@ nav {
     float: right;
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background-color: #f7f7f7;
     z-index: 1;
     border-left: 1px solid;
     border-bottom: 1px solid #000;
@@ -210,7 +218,6 @@ nav::after {
 }
 
 .cart-item-remove {
-    background-color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
@@ -345,7 +352,7 @@ nav::after {
 }
 
 .modal-content-container {
-    background-color: #fff;
+    background-color: #f7f7f7;
     margin: 1.5% auto;
     padding: 30px 20px;
     width: 55%;
