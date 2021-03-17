@@ -50,17 +50,44 @@ cart.addEventListener('click', function(e) {
         const totalNum = Number(slicedTotal)
         const newTotalString = `$${totalNum - reducePriceNum}`
 
+        // adding new total
         const slicedTotalNew = newTotalString.slice(1)
         const totalNewNum = Number(slicedTotalNew)
         finalPriceOne.innerText = `$${totalNewNum.toFixed(2)}`
 
-       e.target.parentElement.remove()
+            // tax adjustment
+            let tax = 0.1025
+            let sliceTotal = finalPriceOne.innerText.slice(1)
+            let priceTotalOne = Number(sliceTotal)
+            let adjustedTax = `${priceTotalOne * tax}`
+            let adjustedTaxNum = Number(adjustedTax)
+            taxPrice.innerText = `$${adjustedTaxNum.toFixed(2)}`
+
+            // tip adjustment 
+            if (noTip.classList.contains('tip-active')) {
+                tipPrice.innerText = '$0.00'
+            } else if (tenTip.classList.contains('tip-active')) {
+                let tip = priceTotalOne * 0.10
+                tipPrice.innerText = `$${tip.toFixed(2)}`
+            } else if (fifTip.classList.contains('tip-active')) {
+                let tip = priceTotalOne * 0.15
+                tipPrice.innerText = `$${tip.toFixed(2)}`
+            } else if (tweTip.classList.contains('tip-active')) {
+                let tip = priceTotalOne * 0.20
+                tipPrice.innerText = `$${tip.toFixed(2)}` 
+            }
+
+            e.target.parentElement.remove()
         
-      
-    } 
-    
+        } 
+        
     if (cart.children.length  <= 0) {
         cart.innerHTML =   `<h2 class="empty-cart-text">Cart Is Empty</h2>`
+        removeActiveTip()
+        noTip.classList.add('tip-active')
+        tenTip.disabled = true
+        fifTip.disabled = true
+        tweTip.disabled = true
     } 
 })
 
@@ -71,6 +98,13 @@ const removeAll = document.getElementById('cart-item-remove')
 removeAll.addEventListener('click', () => {
     cart.innerHTML = `<h2 class="empty-cart-text">Cart Is Empty</h2>`
     finalPriceOne.innerText = '$0.00'
+    taxPrice.innerText = '$0.00'
+    removeActiveTip()
+    noTip.classList.add('tip-active')
+    tipPrice.innerText = '$0.00'
+    tenTip.disabled = true
+    fifTip.disabled = true
+    tweTip.disabled = true
 })
 
 
@@ -85,4 +119,52 @@ let arrOne = cartItemArrPrice.map(arr => arr.slice(1))
     
 finalPriceOne.innerText = `$${arrThree.toFixed(2)}`
 
-// remove button = reduce price
+// adding taxes
+
+const taxPrice = document.querySelector('.tax-price')
+
+let tax = 0.0625
+let sliceTotal = finalPriceOne.innerText.slice(1)
+let priceTotalOne = Number(sliceTotal)
+let adjustedTax = `${priceTotalOne * tax}`
+let adjustedTaxNum = Number(adjustedTax)
+taxPrice.innerText = `$${adjustedTaxNum.toFixed(2)}`
+
+
+
+//// TIP BUTTONS
+
+const tipPrice = document.querySelector('.tip-price')
+
+const noTip = document.querySelector('.tip-no')
+const tenTip = document.querySelector('.tip-ten')
+const fifTip = document.querySelector('.tip-fif')
+const tweTip = document.querySelector('.tip-twe')
+
+const tipBtn = document.querySelectorAll('.tip-btn')
+
+tipBtn.forEach(btn => {
+ btn.addEventListener('click', () => {
+     removeActiveTip()
+     btn.classList.add('tip-active')
+
+     if (noTip.classList.contains('tip-active')) {
+        tipPrice.innerText = '$0.00'
+    } else if (tenTip.classList.contains('tip-active')) {
+        let tip = priceTotalOne * 0.10
+        tipPrice.innerText = `$${tip.toFixed(2)}`
+    } else if (fifTip.classList.contains('tip-active')) {
+        let tip = priceTotalOne * 0.15
+        tipPrice.innerText = `$${tip.toFixed(2)}`
+    } else if (tweTip.classList.contains('tip-active')) {
+        let tip = priceTotalOne * 0.20
+        tipPrice.innerText = `$${tip.toFixed(2)}`    }
+ })
+})
+
+function removeActiveTip() {
+    tipBtn.forEach(btn => {
+        btn.classList.remove('tip-active')
+    })
+}
+

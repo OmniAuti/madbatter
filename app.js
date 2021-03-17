@@ -9,9 +9,11 @@ window.addEventListener('scroll', () => {
    if (navTop.top === 0) {
        hr.style.display = 'none'
        nav.style.borderColor = '#000'
+       nav.style.backgroundColor = '#fff'
     } else {
         hr.style.display = 'block'
         nav.style.borderColor = 'transparent'
+        nav.style.backgroundColor = '#f7f7f7'
    }
 })
 

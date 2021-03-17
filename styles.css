@@ -9,13 +9,8 @@ body {
     background-color: #f7f7f7;
 }
 
-
 a {
     text-decoration: none;
-}
-
-button a {
-    color:#000;
 }
 
 /* -------- CART ---------- */
@@ -27,7 +22,7 @@ button a {
     height: 100vh;
     border-left: 1px solid #000;
     width: 250px;
-    background-color: #f7f7f7;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,9 +50,13 @@ button a {
     display: none;
 }
 
+.checkout a {
+    color: #fff;
+}
+
 .checkout:hover {
     background-color: #a757b5;
-
+    color: #000
 }
 
 .checkout a {
@@ -286,6 +285,7 @@ nav hr {
     margin: 15px;
     cursor: pointer;
     transition: ease all 250ms;
+    background-color: #fff;
 }
 
 .menu-item-container:hover {
