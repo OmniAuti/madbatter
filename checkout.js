@@ -123,7 +123,7 @@ finalPriceOne.innerText = `$${arrThree.toFixed(2)}`
 
 const taxPrice = document.querySelector('.tax-price')
 
-let tax = 0.0625
+let tax = 0.1025
 let sliceTotal = finalPriceOne.innerText.slice(1)
 let priceTotalOne = Number(sliceTotal)
 let adjustedTax = `${priceTotalOne * tax}`
@@ -168,3 +168,4 @@ function removeActiveTip() {
     })
 }
 
+// TOTAL PRICE
