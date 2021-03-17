@@ -35,6 +35,7 @@ modal.addEventListener('click', outsideModalClick)
 
 function opensModal() {
     modal.style.display = 'block'
+    modalMainItemSubtract.disabled = true
 }
 
 
@@ -82,6 +83,7 @@ function outsideModalClick(e) {
 //add items from page to modal
 
 function modalMenuImport(){
+
 
     for (const modalOpens of modalOpen) {
         modalOpens.addEventListener('click', function(e) {
@@ -408,8 +410,6 @@ const modalMainItemSubtract = document.getElementById('minus-main-order')
 const modalMainItemNum = document.getElementById('num-main-order')
 
 
-
-
 modalMainItemAdd.addEventListener('click', mainOrderAdd)
 modalMainItemSubtract.addEventListener('click', mainOrderSub)
 
@@ -437,8 +437,6 @@ function mainOrderAdd() {
     modalMainItemSubtract.disabled = false
    }
 }
-
-
 
 function mainOrderSub() {
 
@@ -491,6 +489,8 @@ function toCart() {
 
     toCartArr.push(totalModalPrice.innerText, modalMainItemNum.value, cartItemName.innerText)
 
+   
+
    for (checkedBox of modalCheckedPush) {
         if (checkedBox.checked === true) {
 
@@ -511,7 +511,8 @@ function toCart() {
      
      <i class="fas fa-trash cart-item-remove"></i>
      
-     <div class="cart-item-number">${toCartArr[1]}<span>&times;</span></div>
+     <div class="cart-item-number">${toCartArr[1]}</div>
+     <span>&times;</span>
      <div class="cart-item-info">
              <span class="cart-item-name">${toCartArr[2]}</span>
              <span class="cart-item-additions">${toCartArr[3]}</span>
@@ -534,7 +535,7 @@ closesModal()
 
 
 const cartEmpty = document.querySelector('.cart-empty-text')
-const checkoutBtn = document.querySelector('.checkout')
+const checkoutBtn = document.getElementById('checkout')
 
 function emptyCartText() {
     if (cartBarCont.children.length > 0) {
@@ -559,3 +560,43 @@ cartBar.addEventListener('click', function (e) {
     emptyCartText()
 
 })
+
+///// CHECKOUT BUTTON - STORE CART IN LOCAL STORAGE
+
+let priceCart = []
+let nameCart = []
+let addiCart = []
+let numCart = []
+
+checkoutBtn.addEventListener('click', moveToCheckout)
+
+function moveToCheckout() {
+  
+    const cartItems = document.querySelectorAll('.cart-item-container')
+    
+
+    for (const itemsInfo of cartItems) {
+        const cartP = itemsInfo.lastElementChild.innerText
+        const cartN = itemsInfo.lastElementChild.previousElementSibling.firstElementChild.innerText
+        const cartA = itemsInfo.lastElementChild.previousElementSibling.lastElementChild.innerText
+        const cartNum = itemsInfo.firstElementChild.nextElementSibling.innerText
+        priceCart.push(cartP)
+        nameCart.push(cartN)
+        addiCart.push(cartA)
+        numCart.push(cartNum)
+    }
+
+    localStorage.setItem( 'name', JSON.stringify(nameCart))
+    localStorage.setItem('additions', JSON.stringify(addiCart))
+    localStorage.setItem('price', JSON.stringify(priceCart))
+    localStorage.setItem('itemNum', JSON.stringify(numCart))
+    
+
+    priceCart = []
+    nameCart = []
+    addiCart = []
+    numCart = []
+
+
+
+}

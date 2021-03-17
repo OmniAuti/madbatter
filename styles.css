@@ -18,13 +18,6 @@ button a {
     color:#000;
 }
 
-hr {
-    width: 794px;
-    float: right;
-    height: 1px;
-    border-bottom: none;
-    border-color: #656566;
-}
 /* -------- CART ---------- */
 
 .cart-bar {
@@ -80,8 +73,9 @@ hr {
     width: calc(100vw - 250px);
     height: calc(100vh - 175px);
     background-image: url('img/hero-1.jpeg');
-    background-size:auto;
-    background-position: center;
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
     border-top: #000 1px solid;
     border-bottom: #000 1px solid;
     position: relative;
@@ -109,7 +103,7 @@ hr {
 .logo-two {
     height: 90px;
     width: 212px;
-    background-color: red;
+    background-color: #e93131;
     position: absolute;
     bottom: 0px;
     left: 69px;
@@ -141,45 +135,45 @@ h5.logo-warp-three {
 }
 
 nav {
-    width: 815px;
+    width: 572px;
     float: right;
     position: sticky;
     top: 0;
     background-color: #f7f7f7;
-    z-index: 1;
+    z-index:10;
     border-left: 1px solid;
     border-bottom: 1px solid #000;
     border-color: transparent;
     transition: all ease 250ms;
     border-radius: 0px 0px 0px 5px;
+    margin-right: 250px;
 }
 
-nav::after {
-    content: '';
-    display: table;
-    clear: both;
+@media (max-width: 1080px) {
+    
+}
+
+nav hr {
+    width: 530px;
+    float: right;
+    height: 1px;
+    border-bottom: none;
+    border-color: #656566;
 }
 
 .nav-links {
     display: flex;
     list-style-type: none;
-    width: 100%;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: space-evenly;
 }
 
 .nav-links li {
-    text-align: center;
-    margin: 15px 25px;
-}
-
-.nav-links li:first-of-type {
-    margin-left: 20px;
+    margin: 15px 0;
 }
 
 .nav-links a {
     cursor: pointer;
-    width: 100%;
     position: relative;
     color:#656566;
 }
@@ -227,7 +221,7 @@ nav::after {
 }
 
 .cart-item-number {
-    width: 15%;
+    width: 7.5%;
     text-align: center;
 }
 
@@ -449,30 +443,36 @@ button:focus,
     position: absolute;
     bottom: 46px;
     left: 30px;
-    outline: 1px solid #656566;
-    outline-offset: -1px;
+    border: 1px solid #656566;
+    border-radius: 10px;
 }
 
 .minus-btn {
-    border: 1px solid #656566;
+    border-right: 1px solid #656566;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
     width: 32px;
     font-size: 1.55em;
-    background-color: #fff; 
+    background-color: transparent; 
     cursor: pointer;
-    height: 100%;
 }
 
 .add-btn {
-    border: 1px solid #656566;
+    border-left: 1px solid #656566;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
     width: 32px;
     font-size: 1.55em;
-    background-color: #fff;
     cursor: pointer;
+    background-color: transparent; 
 }
 
 .add-btn:active,
     .minus-btn:active {
-        border: 1px solid #ba6fb4;
+        color: 1px solid #ba6fb4;
+        transform: scale(.98);
     }
 
 .num-main-order {
