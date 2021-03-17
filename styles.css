@@ -378,6 +378,7 @@ input,
     label {
     cursor: pointer;
     margin: 1px;
+    background-color: #f7f7f7;
 }
      
 .flexed-modal-item {
