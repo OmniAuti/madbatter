@@ -77,6 +77,8 @@ cart.addEventListener('click', function(e) {
                 tipPrice.innerText = `$${tip.toFixed(2)}` 
             }
 
+            totalItUp()
+
             e.target.parentElement.remove()
         
         } 
@@ -88,6 +90,7 @@ cart.addEventListener('click', function(e) {
         tenTip.disabled = true
         fifTip.disabled = true
         tweTip.disabled = true
+        finalTotalPrice.innerText = '$0.00'
     } 
 })
 
@@ -105,6 +108,7 @@ removeAll.addEventListener('click', () => {
     tenTip.disabled = true
     fifTip.disabled = true
     tweTip.disabled = true
+    finalTotalPrice.innerText = '$0.00'
 })
 
 
@@ -123,7 +127,7 @@ finalPriceOne.innerText = `$${arrThree.toFixed(2)}`
 
 const taxPrice = document.querySelector('.tax-price')
 
-let tax = 0.1025
+const tax = 0.1025
 let sliceTotal = finalPriceOne.innerText.slice(1)
 let priceTotalOne = Number(sliceTotal)
 let adjustedTax = `${priceTotalOne * tax}`
@@ -148,17 +152,29 @@ tipBtn.forEach(btn => {
      removeActiveTip()
      btn.classList.add('tip-active')
 
+     let slicedOnePrice = finalPriceOne.innerText.slice(1)
+     let onePriceNum = Number(slicedOnePrice)
+
      if (noTip.classList.contains('tip-active')) {
         tipPrice.innerText = '$0.00'
+        totalItUp()
+
     } else if (tenTip.classList.contains('tip-active')) {
-        let tip = priceTotalOne * 0.10
+        
+        let tip = onePriceNum * 0.10
         tipPrice.innerText = `$${tip.toFixed(2)}`
+        totalItUp()
+        
     } else if (fifTip.classList.contains('tip-active')) {
-        let tip = priceTotalOne * 0.15
+        let tip = onePriceNum * 0.15
         tipPrice.innerText = `$${tip.toFixed(2)}`
+        totalItUp()
+   
     } else if (tweTip.classList.contains('tip-active')) {
-        let tip = priceTotalOne * 0.20
-        tipPrice.innerText = `$${tip.toFixed(2)}`    }
+        let tip = onePriceNum * 0.20
+        tipPrice.innerText = `$${tip.toFixed(2)}`
+        totalItUp()
+    }
  })
 })
 
@@ -169,3 +185,36 @@ function removeActiveTip() {
 }
 
 // TOTAL PRICE
+
+const finalTotalPrice = document.querySelector('.final-total-price')
+
+let totalPriceArr = []
+
+
+function totalItUp() {
+
+    finalTotalPrice.innerText = 0.00
+
+    //first total 
+    let slicedOnePrice = finalPriceOne.innerText.slice(1)
+    let onePriceNum = Number(slicedOnePrice)
+
+    //tax bracket
+    let adjustedTax = `${onePriceNum * tax}`
+    let adjustedTaxNum = Number(adjustedTax)
+
+    // tip
+    let tipPriceSlice = tipPrice.innerText.slice(1)
+    let tipPriceNum = Number(tipPriceSlice)
+
+    //magic
+    totalPriceArr.push(onePriceNum, adjustedTaxNum, tipPriceNum)
+
+    let forRealFinalPrice = totalPriceArr.reduce((a, b) => a + b, 0)
+    
+    finalTotalPrice.innerText = `$${forRealFinalPrice.toFixed(2)}`
+
+    totalPriceArr = []
+}
+
+totalItUp()
