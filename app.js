@@ -162,12 +162,14 @@ function modalMenuImport(){
                 const juiceModal = document.querySelector('.juice-items')
                 const teaModal = document.querySelector('.tea-cont')
                 const coffeeModal = document.querySelector('.coffee-cont')
+                const waterModal = document.querySelector('.water-items')
 
                 const almondP = document.getElementById('almond-milk-p')
                 const milkP = document.getElementById('milk-p')
                 const juiceO = document.getElementById('orange')
                 const teaG = document.getElementById('green-t')
                 const coffeeB = document.getElementById('black-coffee')
+                const waterP = document.getElementById('plainW')
 
 
 
@@ -249,11 +251,13 @@ function modalMenuImport(){
                     juiceModal.style.display = 'none'
                     milkModal.style.display = 'none'
                     teaModal.style.display = 'none'
-
+                    waterModal.style.display = 'none'
+                    
                     sidesModal.style.display = 'none'
                     removeModalExtraS.style.display = 'none'
 
                     almondP.checked = true
+                    waterP.checked = false
                     coffeeB.checked = false
                     teaG.checked = false
                     juiceO.checked = false
@@ -268,11 +272,13 @@ function modalMenuImport(){
                     juiceModal.style.display = 'none'
                     almondModal.style.display = 'none'
                     teaModal.style.display = 'none'
+                    waterModal.style.display = 'none'
 
                     sidesModal.style.display = 'none'
                     removeModalExtraS.style.display = 'none'
 
                     milkP.checked = true
+                    waterP.checked = false
                     coffeeB.checked = false
                     teaG.checked = false
                     juiceO.checked = false
@@ -287,11 +293,13 @@ function modalMenuImport(){
                     milkModal.style.display = 'none'
                     almondModal.style.display = 'none'
                     teaModal.style.display = 'none'
+                    waterModal.style.display = 'none'
 
                     sidesModal.style.display = 'none'
                     removeModalExtraS.style.display = 'none'
 
                     juiceO.checked = true
+                    waterP.checked = false
                     coffeeB.checked = false
                     teaG.checked = false
                     milkP.checked = false
@@ -306,11 +314,13 @@ function modalMenuImport(){
                     juiceModal.style.display = 'none'
                     milkModal.style.display = 'none'
                     almondModal.style.display = 'none'
+                    waterModal.style.display = 'none'
 
                     sidesModal.style.display = 'none'
                     removeModalExtraS.style.display = 'none'
 
                     teaG.checked = true
+                    waterP.checked = false
                     coffeeB.checked = false
                     juiceO.checked = false
                     milkP.checked = false
@@ -325,11 +335,34 @@ function modalMenuImport(){
                     juiceModal.style.display = 'none'
                     milkModal.style.display = 'none'
                     almondModal.style.display = 'none'
+                    waterModal.style.display = 'none'
 
                     sidesModal.style.display = 'none'
                     removeModalExtraS.style.display = 'none'
 
                     coffeeB.checked = true
+                    waterP.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
+                    almondP.checked = false
+                    mapleDefault.checked = false
+
+                } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('water')) {
+                    drinkModal.style.display = 'block'
+                    waterModal.style.display = 'flex'
+
+                    coffeeModal.style.display = 'none'
+                    teaModal.style.display = 'none'
+                    juiceModal.style.display = 'none'
+                    milkModal.style.display = 'none'
+                    almondModal.style.display = 'none'
+
+                    sidesModal.style.display = 'none'
+                    removeModalExtraS.style.display = 'none'
+
+                    waterP.checked = true
+                    coffeeB.checked = false
                     teaG.checked = false
                     juiceO.checked = false
                     milkP.checked = false
@@ -342,6 +375,7 @@ function modalMenuImport(){
                     drinkModal.style.display = 'none'
                     mapleDefault.checked = true
 
+                    waterP.checked = false
                     coffeeB.checked = false
                     teaG.checked = false
                     juiceO.checked = false

@@ -408,6 +408,19 @@
                                 
                             </div>
 
+                            <div class="flexed-modal-item water-items">
+                                
+                                <div>
+                                <input checked="true" type="radio" name="water" value="Plain" id="plainW" class="free-checked modal-to-cart">
+                                <label for="plainW">Plain</label>
+                                </div>
+                                <div>
+                                <input type="radio" name="water" value="With Lemon" id="lemonW" class="free-checked modal-to-cart">
+                                <label for="lemonW">With Lemon</label>
+                                </div>
+                                
+                            </div>
+
                         </div>
 
 
@@ -415,14 +428,14 @@
 
                         <div class="add-to-cart">
 
-                        <div class="add-container">
-                            <button disabled="true" id="minus-main-order" class="minus-btn"><i class="fas fa-minus"></i></button>
-                        <input class="num-main-order" id="num-main-order" type="number" min="0" max="99" value="1" readonly>
-                            <button id="plus-main-order" class="add-btn"><i class="fas fa-plus"></i></button>
-                        </div>
+                            <div class="add-container">
+                                <button disabled="true" id="minus-main-order" class="minus-btn"><i class="fas fa-minus"></i></button>
+                            <input class="num-main-order" id="num-main-order" type="number" min="0" max="99" value="1" readonly>
+                                <button id="plus-main-order" class="add-btn"><i class="fas fa-plus"></i></button>
+                            </div>
 
-                        <button class="add-to-cart-btn" id="add-to-cart-btn">Add To Cart</button>
-                        <p class="modal-total" style="text-decoration: underline;">Total: $<span class="final-total-modal"></span></p>
+                            <button class="add-to-cart-btn" id="add-to-cart-btn">Add To Cart</button>
+                            <p class="modal-total" style="text-decoration: underline;">Total: $<span class="final-total-modal"></span></p>
 
                         </div>
                     
@@ -430,9 +443,11 @@
         </div> 
     </div>
 
-    <section class="menu-top waffles" id="waffles">
+    <h2 class="menu-top">Waffles</h2>
 
-        <h2 class="menu">Waffles</h2>
+    <section class="waffles menu-flexed" id="waffles">
+
+        
 
         <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="https://www.tasteandtellblog.com/wp-content/uploads/2020/01/Best-Waffle-Recipe-tasteandtellblog.com-1.jpg" alt="waffle">
@@ -481,13 +496,19 @@
             <p class="item-description">Get the same feeling those fancy-schmancy pants do while eating in their high towers without all that political fuss. Whipped cream that we prepare by hand every morning crowns this masterpiece.</p>
             <h3 class="item-price">$12.00</h3>
         </div>
+        <div class="menu-item-container" id="modal-open">
+            <img class="item-picture" src="https://food.theffeed.com/wp-content/uploads/sites/7/2017/05/1492620138-waffle-smores-3-e1599068226561.jpg" alt="smores waffle">
+            <h3 class="item-name">Give Me S'more</h3>
+            <p class="item-description">A fine stack of graham cracker infused waffles, covered with melting marshmellow and chocolate.</p>
+            <h3 class="item-price">$11.50</h3>
+        </div>
 
 
     </section>
 
-    <section class="french-toast" id="french-toast">
+    <h2 class="menu">French Toast</h2>
 
-        <h2 class="menu">French Toast</h2>
+    <section class="french-toast menu-flexed" id="french-toast">
 
         <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="https://www.aspicyperspective.com/wp-content/uploads/2019/09/How-To-Make-French-Toast-7.jpg" alt="french toast">
@@ -518,6 +539,13 @@
         </div>
 
         <div class="menu-item-container" id="modal-open">
+            <img class="item-picture" src="https://parade.com/wp-content/uploads/2017/02/Red-Velvet-French-Toast-with-Vanilla-Bean-Cheesecake-Filling-26-600x600.jpg" alt="red velvet french toast">
+            <h3 class="item-name">The Red French</h3>
+            <p class="item-description">Slices of toast soaked and smothered in layers of velvety batter. Guarenteed redder than the guillotine lined streets of the French revolution.</p>
+            <h3 class="item-price">$10.75</h3>
+        </div>
+
+        <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="https://thebakermama.com/wp-content/uploads/2015/08/IMG_5927.jpg" alt="french toast rolls">
             <h3 class="item-name">Toasted Roll-Ups</h3>
             <p class="item-description">Tiny cinnamon french toasts rolled into bite size morsels. Dip or drown them in a sauce of your choice.</p>
@@ -525,9 +553,12 @@
         </div>
 
     </section>
-    <section class="pancakes" id="pancakes">
 
-        <h2 class="menu">Pancakes</h2>
+    <h2 class="menu">Pancakes</h2>
+
+    <section class="pancakes menu-flexed" id="pancakes">
+
+       
 
         <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2Farchive%2F8cfbcbb2919742682345681d469b7417a73e4dfe" alt="stack of pancakes">
@@ -558,9 +589,10 @@
         </div>
         
     </section>
-    <section class="sides" id="sides">
 
-        <h2 class="menu">Sides</h2>
+    <h2 class="menu">Sides</h2>
+
+    <section class="sides menu-flexed" id="sides">
 
         <div class="menu-item-container egg"  id="modal-open">
             <img class="item-picture" src="https://cdn-prod.medicalnewstoday.com/content/images/articles/283/283659/a-basket-of-eggs.jpg" alt="eggs">
@@ -591,9 +623,12 @@
         </div>
         
     </section>
-    <section class="drinks" id="drinks">
 
-        <h2 class="menu">Drinks</h2>
+    <h2 class="menu">Drinks</h2>
+
+    <section class="drinks menu-flexed" id="drinks">
+
+      
 
         <div class="menu-item-container coffee" id="modal-open">
             <img class="item-picture" src="https://img1.mashed.com/img/gallery/coffee-mistakes-youre-probably-making-at-home/intro-1594766282.jpg" alt="coffee">
@@ -628,6 +663,13 @@
             <h3 class="item-name">Almond Milk</h3>
             <p class="item-description">Milk squeezed from the most exquisite free-range almonds.</p>
             <h3 class="item-price">$3.00</h3>
+        </div>
+
+        <div class="menu-item-container water" id="modal-open">
+            <img class="item-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3y8aEQIfvEET5rtHorALyibA4zbpRH8UtFQ&usqp=CAU" alt="almond milk">
+            <h3 class="item-name">Water</h3>
+            <p class="item-description">A glass of pristine liquid fused from hydrogen and oxygen. Some say this elixer is the true giver of life.</p>
+            <h3 class="item-price">$1.00</h3>
         </div>
         
     </section>
