@@ -324,7 +324,7 @@ nav hr {
         background-color: #f7f7f7 !important;
         border-radius: 0;
         border-left: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #000 !important;
     }
 
     .nav-links li {
@@ -333,6 +333,7 @@ nav hr {
 
     nav hr {
         display: none;
+        border-color: transparent;
     }
 
     .nav-links a::after {
