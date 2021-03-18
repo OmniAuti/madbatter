@@ -90,6 +90,7 @@ cart.addEventListener('click', function(e) {
         tenTip.disabled = true
         fifTip.disabled = true
         tweTip.disabled = true
+        orderBtn.disabled = true
         finalTotalPrice.innerText = '$0.00'
     } 
 })
@@ -108,6 +109,7 @@ removeAll.addEventListener('click', () => {
     tenTip.disabled = true
     fifTip.disabled = true
     tweTip.disabled = true
+    orderBtn.disabled = true
     finalTotalPrice.innerText = '$0.00'
 })
 
@@ -228,3 +230,5 @@ orderBtn.addEventListener('click', () => {
     orderIt.style.display = 'block'
     localStorage.clear()
 })
+
+ // ORDER BUTTON

@@ -226,7 +226,8 @@ font-size: 1.25em;
 
 .tip-ten:disabled,
     .tip-fif:disabled,
-        .tip-twe:disabled {
+        .tip-twe:disabled,
+            .order-btn:disabled {
             cursor: not-allowed;
         }
 
