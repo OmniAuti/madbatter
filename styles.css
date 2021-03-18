@@ -96,7 +96,7 @@ a {
     .hero {
      background-position: center bottom 35%;
      border-top: none;
-
+     height: calc(100vh - 200px);
     }
 }
 
