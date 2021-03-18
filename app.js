@@ -558,6 +558,8 @@ function toCart() {
      
          cartBarCont.appendChild(cartItem)
 
+         mobileCartCount()
+
 toCartArr = []
 exStorage = []
 
@@ -597,6 +599,15 @@ cartBar.addEventListener('click', function (e) {
 
 })
 
+///// MOBILE CART COUNT
+
+const mobileCartCountNum = document.querySelector('.mobile-cart-num')
+const mobileCart = document.querySelector('.mobile-cart')
+
+function mobileCartCount() {
+    mobileCartCountNum.innerText = cartBarCont.children.length
+}
+
 ///// CHECKOUT BUTTON - STORE CART IN LOCAL STORAGE
 
 let priceCart = []
@@ -605,6 +616,7 @@ let addiCart = []
 let numCart = []
 
 checkoutBtn.addEventListener('click', moveToCheckout)
+mobileCart.addEventListener('click', moveToCheckout)
 
 function moveToCheckout() {
   
@@ -632,7 +644,4 @@ function moveToCheckout() {
     nameCart = []
     addiCart = []
     numCart = []
-
-
-
 }
