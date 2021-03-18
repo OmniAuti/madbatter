@@ -30,12 +30,6 @@ a {
     z-index: 2;
 }
 
-@media (max-width: 1075px) {
-    .cart-bar {
-        display: none;
-    }
-}
-
 .cart-bar-cont {
     display: none;
     height: 80vh;
@@ -48,7 +42,7 @@ a {
     position: absolute;
     bottom: 50px;
     padding: 1em 0em;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #ba6fb4;
     border: none;
     cursor: pointer;
@@ -69,6 +63,56 @@ a {
     padding: 1em 2.5em;
 }
 
+/* --------  MOBILE CART ----------- */
+
+.mobile-cart-cont {
+    background-color: transparent;
+    width: 100vw;
+    height: 75px;
+    position: fixed;
+    bottom: 25px;
+    z-index: 10;
+    margin: 0 auto;
+    display: none;
+}
+
+.mobile-cart {
+    background-color: #ba6fb4;
+    width: 95%;
+    height: 75px;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-cart i {
+    margin-left: 25px;
+    font-size: 2.25em;
+}
+
+.mobile-cart-num-cont {
+    margin-right: 25px;
+    background-color: #a757b5;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1075px) {
+    .cart-bar {
+        display: none;
+    }
+
+    .mobile-cart-cont {
+        display: block;
+    }
+}
 
 
 /* --------- HERO ------------- */
@@ -373,42 +417,6 @@ nav hr {
     color: #000;
 }
 
-.mobile-cart-cont {
-    background-color: transparent;
-    width: 100vw;
-    height: 75px;
-    position: fixed;
-    bottom: 25px;
-    z-index: 10;
-    margin: 0 auto;
-}
-
-.mobile-cart {
-    background-color: #ba6fb4;
-    width: 95%;
-    height: 75px;
-    margin: 0 auto;
-    border-radius: 5px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mobile-cart i {
-    margin-left: 25px;
-}
-
-.mobile-cart-num-cont {
-    margin-right: 25px;
-    background-color: #a757b5;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 /* -------- MENU ------- */
 
 .menu-flexed {
@@ -515,7 +523,7 @@ nav hr {
     padding: 25px 20px;
     width: 55%;
     box-shadow: 1px 5px 8px rgba(0,0,0, 0.5), -1px -5px 8px rgba(0,0,0,0.5);
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative; 
 }
 
@@ -611,7 +619,7 @@ margin: 5px 0;
 
 .add-to-cart-btn {
     padding: 1em 2.5em;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #f4a32c;
     border: none;
     cursor: pointer;
@@ -647,7 +655,7 @@ button:focus,
 
 .add-container {
     border: 1px solid #656566;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .minus-btn {
@@ -691,7 +699,7 @@ button:focus,
 @media (max-width: 650px) {
     .add-container {
         border: 1px solid #656566;
-        border-radius: 10px;
+        width: 105px;
     }
     
     .minus-btn {
