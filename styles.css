@@ -688,6 +688,7 @@ button:focus,
     
     .num-main-order {
         font-size: 1.75em;
+        color: red;
     }
 }
 
