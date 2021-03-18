@@ -218,3 +218,13 @@ function totalItUp() {
 }
 
 totalItUp()
+
+// ORDER BUTTON 
+
+const orderBtn = document.querySelector('.order-btn')
+const orderIt = document.querySelector('.modal-cont')
+
+orderBtn.addEventListener('click', () => {
+    orderIt.style.display = 'block'
+    localStorage.clear()
+})

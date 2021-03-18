@@ -54,7 +54,6 @@ button a {
     .tip-fif:disabled,
         .tip-twe:disabled {
             cursor: not-allowed;
-            border-color
         }
 
 .tip-btn:hover {
@@ -247,4 +246,66 @@ font-size: 1.25em;
 .cart {
     display: flex;
     flex-direction: column;
+}
+
+.logo {
+    height: 198px;
+    width: 210px;
+    background-image: url('img/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.order-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-btn {
+    padding: 1em 2.5em;
+    border-radius: 5px;
+    background-color: #f4a32c;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15em;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.order-btn:active {
+    transform: scale(.98);
+}
+
+.modal-cont {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.5);
+    overscroll-behavior: contain;
+}
+
+.modal {
+    background-color: #f7f7f7;
+    height: 250px;
+    margin: 15% auto;
+    padding: 25px;
+    width: 500px;
+    box-shadow: 1px 5px 8px rgba(0,0,0, 0.5), -1px -5px 8px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal h3 {
+    margin-top: 55px;
 }
