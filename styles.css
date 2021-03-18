@@ -657,19 +657,19 @@ button:focus,
     }
     
     .minus-btn {
-        width: 25px;
+        width: 20px;
         font-size: 1.8em;
 
     }
     
     .add-btn {
-        width: 25px;
+        width: 20px;
         font-size: 1.8em;
 
     }
     
     .num-main-order {
-        width: 25px;
+        width: 20px;
         font-size: 1.75em;
     }
 }
