@@ -170,14 +170,14 @@ h5.logo-warp-three {
     }
 
     .logo h5 {
-        margin: 64px 2.5px 0px 3px;   
+        margin: 64px 2.5px 0px 2.5px;   
     }
 
     h5.logo-warp-one {
-        transform: rotateY(30deg) rotate(10deg) translateY(15px);
+        transform: rotateY(30deg) rotate(10deg) translateY(13px);
     }
     h5.logo-warp-two {
-        transform: translateY(5px);
+        transform: translateY(6px);
     }
     h5.logo-warp-three {
         transform: rotateY(-25deg) rotate(-8deg) translateY(8px);
@@ -369,13 +369,12 @@ nav hr {
 }
 
 .menu-top {
-    margin: 150px 10px 10px 10px;
-    padding: 30px;
+    margin: 150px 0px 0px 0px;
+    padding: 50px 0 10px 25px;
 }
 
 .menu {
-    margin: 10px;
-    padding: 30px;
+    padding: 50px 0 10px 25px;
 }
 
 .menu-item-container {
