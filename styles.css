@@ -339,8 +339,8 @@ nav hr {
     }
 
     .nav-links a::after {
-        bottom: -12.5px;
-        height: 1.5px;
+        bottom: -12px;
+        height: 2.5px;
     }
 }
 
