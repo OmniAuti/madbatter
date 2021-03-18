@@ -9,14 +9,31 @@
     <title>The Mad Batter</title>
 </head>
 <body>
+
+    <!------------------------   CART BAR   ------------------------------------------>
     
         <div class="cart-bar">
             <div class="cart-bar-cont"></div>
             
             <h2 class="cart-empty-text">Your Cart Is Empty</h2>
-            <button id="checkout" class="checkout"><a href="cart.html">Checkout</a></button>
+            <a href="cart.html" class="cart-btn"><button id="checkout" class="checkout">Checkout</button></a>
         </div>
 
+                <!------------------------   MOBILE CART BTN   ------------------------------------------>
+
+    <div class="mobile-cart-cont">
+        <a href="cart.html">
+            <div class="mobile-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Checkout</h3>
+                <div class="mobile-cart-num-cont">
+                    <span class="mobile-cart-num">0</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!------------------------   Hero   ------------------------------------------>
 
     <section class="hero">
         <div class="logo">
@@ -36,18 +53,8 @@
         <hr>
     </nav>
 
-    <div class="mobile-cart-cont">
-        <a href="cart.html">
-        <div class="mobile-cart">
-            <i class="fas fa-shopping-cart"></i>
-            <h3>Checkout</h3>
-            <div class="mobile-cart-num-cont">
-                <span class="mobile-cart-num">0</span>
-            </div>
-        </div>
-        </a>
-    </div>
 
+        <!------------------------   MODAL   ------------------------------------------>
 
 
     <div id="modal" class="modal">
@@ -453,6 +460,9 @@
         </div> 
     </div>
 
+            <!------------------------   MOBILE CART BTN   ------------------------------------------>
+
+
     <h2 class="menu-top" id="waffles">Waffles</h2>
 
     <section class="waffles menu-flexed" >
@@ -506,6 +516,7 @@
             <p class="item-description">Get the same feeling those fancy-schmancy pants do while eating in their high towers without all that political fuss. Whipped cream that we prepare by hand every morning crowns this masterpiece.</p>
             <h3 class="item-price">$12.00</h3>
         </div>
+
         <div class="menu-item-container" id="modal-open">
             <img class="item-picture" src="https://food.theffeed.com/wp-content/uploads/sites/7/2017/05/1492620138-waffle-smores-3-e1599068226561.jpg" alt="smores waffle">
             <h3 class="item-name">Give Me S'more</h3>

@@ -11,6 +11,7 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* -------- CART ---------- */
@@ -37,32 +38,25 @@ a {
     overflow: auto;
 }
 
+.cart-btn {
+    position: fixed;
+    bottom: 50px;
+}
 
 .checkout {
-    position: absolute;
-    bottom: 50px;
-    padding: 1em 0em;
+    padding: 1em 2.5em;
     border-radius: 5px;
     background-color: #ba6fb4;
     border: none;
     cursor: pointer;
     font-size: 1.15em;
     display: none;
-}
-
-.checkout a {
     color: #fff;
 }
 
 .checkout:hover {
     background-color: #a757b5;
-    color: #000
 }
-
-.checkout a {
-    padding: 1em 2.5em;
-}
-
 /* --------  MOBILE CART ----------- */
 
 .mobile-cart-cont {
@@ -73,6 +67,7 @@ a {
     bottom: 25px;
     z-index: 10;
     margin: 0 auto;
+    display: none;
 }
 
 .mobile-cart {
@@ -115,6 +110,10 @@ a {
 
     .mobile-cart {
         display: flex;
+    }
+
+    .mobile-cart-cont {
+        display: block;
     }
 }
 
