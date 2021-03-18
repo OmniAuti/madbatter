@@ -170,7 +170,8 @@ h5.logo-warp-three {
     }
 
     .logo h5 {
-        margin: 64px 2.5px 0px 2.5px;   
+        margin: 64px 0px 0px 0px;
+        font-size: 1.30em;   
     }
 
     h5.logo-warp-one {
@@ -370,6 +371,24 @@ nav hr {
     margin-top: 80px;
     margin-left: 20px;
     color: #000;
+}
+
+.mobile-cart-cont {
+    background-color: transparent;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    bottom: 25px;
+    z-index: 10;
+    margin: 0 auto;
+}
+
+.mobile-cart {
+    background-color: #ba6fb4;
+    width: 85%;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
 /* -------- MENU ------- */
