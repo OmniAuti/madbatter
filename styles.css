@@ -332,11 +332,12 @@ nav hr {
     }
 
     nav hr {
-        border-color: transparent;
+        display: none;
     }
 
     .nav-links a::after {
-        bottom: -12px;
+        bottom: -13px;
+        height: 1px;
     }
 }
 

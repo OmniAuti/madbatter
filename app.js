@@ -566,6 +566,8 @@ exStorage = []
 emptyCartText()
 closesModal()
 
+mobileCart.style.display = 'flex'
+
 }
 
 
@@ -606,6 +608,10 @@ const mobileCart = document.querySelector('.mobile-cart')
 
 function mobileCartCount() {
     mobileCartCountNum.innerText = cartBarCont.children.length
+}
+
+if (cartBarCont.children.length === 0) {
+    mobileCart.style.display = 'none'
 }
 
 ///// CHECKOUT BUTTON - STORE CART IN LOCAL STORAGE
