@@ -73,17 +73,16 @@ a {
     bottom: 25px;
     z-index: 10;
     margin: 0 auto;
-    display: none;
 }
 
 .mobile-cart {
+    display: none;
     background-color: #ba6fb4;
     width: 95%;
     height: 75px;
     margin: 0 auto;
     border-radius: 5px;
     color: #fff;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
@@ -114,8 +113,8 @@ a {
         display: none;
     }
 
-    .mobile-cart-cont {
-        display: block;
+    .mobile-cart {
+        display: flex;
     }
 }
 
