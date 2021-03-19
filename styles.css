@@ -85,6 +85,7 @@ a {
 
 .mobile-cart:active {
     transform:scale(.98);
+    -webkit-transform: scale(.98);
 }
 
 .mobile-cart i {
@@ -194,12 +195,15 @@ a {
 
 h5.logo-warp-one {
     transform: rotateY(30deg) rotate(10deg) translateY(7px);
+    -webkit-transform: rotateY(30deg) rotate(10deg) translateY(7px);
 }
 h5.logo-warp-two {
     transform: translateY(1px);
+    -webkit-transform: translateY(1px);
 }
 h5.logo-warp-three {
     transform: rotateY(-25deg) rotate(-8deg) translateY(3px);
+    -webkit-transform: rotateY(-25deg) rotate(-8deg) translateY(3px);
 }
 
 @media (max-width: 650px) {
@@ -208,6 +212,7 @@ h5.logo-warp-three {
         width: 240px;
         left: 50%;
         transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
     }
 
     .logo-two {
@@ -215,6 +220,7 @@ h5.logo-warp-three {
         width: 242px;
         left: 50%;
         transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
     }
 
     .logo h5 {
@@ -224,12 +230,15 @@ h5.logo-warp-three {
 
     h5.logo-warp-one {
         transform: rotateY(30deg) rotate(10deg) translateY(13px);
+        -webkit-transform:  rotateY(30deg) rotate(10deg) translateY(13px);
     }
     h5.logo-warp-two {
         transform: translateY(6px);
+        -webkit-transform: translateY(6px);
     }
     h5.logo-warp-three {
         transform: rotateY(-25deg) rotate(-8deg) translateY(8px);
+        -webkit-transform: rotateY(-25deg) rotate(-8deg) translateY(8px);
     }
 
 }
@@ -408,7 +417,7 @@ nav hr {
     color: #656566;
     text-overflow: ellipsis;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
     text-align: left;
     white-space: nowrap;
     font-size: 8px;
@@ -451,6 +460,7 @@ nav hr {
     margin: 5px 5px 5px 10px;
     cursor: pointer;
     transition: ease all 250ms;
+    -webkit-transition: ease all 250ms;
     background-color: #fff;
 }
 
@@ -585,11 +595,11 @@ input,
 }
      
 .flexed-modal-item {
-display: flex;
-justify-content: space-around;
-align-content: center;
-width: 100%;
-margin: 5px 0;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    margin: 5px 0;
 }
 
 .flexed-modal-item div {
@@ -695,6 +705,7 @@ button:focus,
     .minus-btn:active {
         color: 1px solid #ba6fb4;
         transform: scale(.98);
+        -webkit-transform: scale(.98);
     }
 
 .num-main-order {

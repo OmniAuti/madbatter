@@ -81,7 +81,8 @@ font-size: 1.25em;
 }
 
 .cart-item-remove:active {
-    transform: scale(.98)
+    transform: scale(.98);
+    -webkit-transform:scale(.98)
 }
 
 .title-cart {
@@ -92,7 +93,7 @@ font-size: 1.25em;
 }
 
 .cart-items-cont {
-    position: relative;
+   position: relative;
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -141,7 +142,8 @@ font-size: 1.25em;
 }
 
 .cart-one-item-remove:active {
-    transform: scale(.98)
+    transform: scale(.98);
+    -webkit-transform: scale(.98);
 }
 
 .cart-item-price {
@@ -237,6 +239,7 @@ font-size: 1.25em;
 
 .tip-btn:active {
     transform: scale(.98);
+    -webkit-transform: scale(.98);
 }
 
 .tip-active {
@@ -290,6 +293,7 @@ font-size: 1.25em;
 
 .order-btn:active {
     transform: scale(.98);
+    -webkit-transform: scale(.98);
 }
 
 /* -------- MODAL ------- */
@@ -388,5 +392,4 @@ font-size: 1.25em;
     .modal h3 {
         margin-top: 20px;
     }
-
 }
