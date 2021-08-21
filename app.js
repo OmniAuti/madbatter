@@ -189,6 +189,11 @@ function modalMenuImport(){
                     mapleDefault.checked = false
                     bacon.checked = false
                     hashbrowns.checked = false
+                    waterP.checked = false
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
                     
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('potatoes')) {
 
@@ -207,6 +212,11 @@ function modalMenuImport(){
                     mapleDefault.checked = false
                     bacon.checked = false
                     scrambled.checked = false
+                    waterP.checked = false
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
                    
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('meat')) {
@@ -226,6 +236,11 @@ function modalMenuImport(){
                     mapleDefault.checked = false
                     hashbrowns.checked = false
                     scrambled.checked = false
+                    waterP.checked = false
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
                     
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('avacado-toast')) {
                     sidesModal.style.display = 'block'
@@ -242,6 +257,11 @@ function modalMenuImport(){
                     hashbrowns.checked = false
                     scrambled.checked = false
                     bacon.checked = false
+                    waterP.checked = false
+                    coffeeB.checked = false
+                    teaG.checked = false
+                    juiceO.checked = false
+                    milkP.checked = false
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('almond-milk')) {
                     drinkModal.style.display = 'block'
@@ -263,6 +283,9 @@ function modalMenuImport(){
                     juiceO.checked = false
                     milkP.checked = false
                     mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('milk')) {
                     drinkModal.style.display = 'block'
@@ -284,6 +307,9 @@ function modalMenuImport(){
                     juiceO.checked = false
                     almondP.checked = false
                     mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('juice')) {
                     drinkModal.style.display = 'block'
@@ -305,6 +331,9 @@ function modalMenuImport(){
                     milkP.checked = false
                     almondP.checked = false
                     mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('tea')) {
                     drinkModal.style.display = 'block'
@@ -326,6 +355,9 @@ function modalMenuImport(){
                     milkP.checked = false
                     almondP.checked = false
                     mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('coffee')) {
                     drinkModal.style.display = 'block'
@@ -347,6 +379,9 @@ function modalMenuImport(){
                     milkP.checked = false
                     almondP.checked = false
                     mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
 
                 } else if (e.target.parentElement.classList.contains('menu-item-container') && e.target.parentElement.classList.contains('water')) {
                     drinkModal.style.display = 'block'
@@ -368,6 +403,9 @@ function modalMenuImport(){
                     milkP.checked = false
                     almondP.checked = false
                     mapleDefault.checked = false
+                    hashbrowns.checked = false
+                    scrambled.checked = false
+                    bacon.checked = false
 
                 } else {
                     removeModalExtraS.style.display = 'block'
