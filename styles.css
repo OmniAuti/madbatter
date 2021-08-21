@@ -5,6 +5,9 @@
     font-family: 'Shippori Mincho B1', serif;
 }
 
+html {
+    scroll-behavior: smooth;
+
 body {
     background-color: #f7f7f7;
 }
