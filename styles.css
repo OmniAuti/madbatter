@@ -14,7 +14,6 @@ body {
 }
 
 a {
-     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     cursor: pointer;
 }
@@ -437,6 +436,12 @@ nav hr {
     margin-top: 80px;
     margin-left: 20px;
     color: #000;
+}
+
+/* -------- FIX FOR AWKWARD SCROLL POSITION ------- */
+
+.drinks {
+    padding-bottom: 75px;
 }
 
 /* -------- MENU ------- */
