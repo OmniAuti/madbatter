@@ -1,3 +1,3 @@
-Template Store
+Template Bike Store
 
-https://autiomni.github.io/madbatter/
+https://omniauti.github.io/madbatter/
