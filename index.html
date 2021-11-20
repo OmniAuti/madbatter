@@ -1,702 +1,1283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="img/icon.ico" type="image/icon">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="img/icon.ico" type="image/icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap"rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Mad Batter</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!------------------------   CART BAR   ------------------------------------------>
-    
-        <div class="cart-bar">
-            <div class="cart-bar-cont"></div>
-            
-            <h2 class="cart-empty-text">Your Cart Is Empty</h2>
-            <a href="cart.html" class="cart-btn"><button id="checkout" class="checkout">Checkout</button></a>
-        </div>
 
-                <!------------------------   MOBILE CART BTN   ------------------------------------------>
+    <div class="cart-bar">
+      <div class="cart-bar-cont"></div>
+
+      <h2 class="cart-empty-text">Your Cart Is Empty</h2>
+      <a href="cart.html" class="cart-btn"
+        ><button id="checkout" class="checkout">Checkout</button></a
+      >
+    </div>
+
+    <!------------------------   MOBILE CART BTN   ------------------------------------------>
 
     <div class="mobile-cart-cont">
-        <a href="cart.html">
-            <div class="mobile-cart">
-                <i class="fas fa-shopping-cart"></i>
-                <h3>Checkout</h3>
-                <div class="mobile-cart-num-cont">
-                    <span class="mobile-cart-num">0</span>
-                </div>
-            </div>
-        </a>
+      <a href="cart.html">
+        <div class="mobile-cart">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>Checkout</h3>
+          <div class="mobile-cart-num-cont">
+            <span class="mobile-cart-num">0</span>
+          </div>
+        </div>
+      </a>
     </div>
 
     <!------------------------   Hero   ------------------------------------------>
 
     <section class="hero">
-        <div class="logo">
-            <h5 class="logo-warp-one">The</h5><h5 class="logo-warp-two">Mad</h5><h5 class="logo-warp-three">Batter</h5>
-        </div>
-        <div class="logo-two"></div>
+        <h1 class="logo-name">The</h1>
+        <h1 class="logo-name">Mad</h1>
+        <h1 class="logo-name">Batter</h1>
+      <div class="logo">
+        <h5 class="logo-warp-one">The</h5>
+        <h5 class="logo-warp-two">Mad</h5>
+        <h5 class="logo-warp-three">Batter</h5>
+      </div>
+      <div class="logo-two"></div>
     </section>
 
     <nav>
-        <ul class="nav-links">
-            <li><a href="#waffles">Waffles</a></li>
-            <li><a href="#french-toast">French Toast</a></li>
-            <li><a href="#pancakes">Pancakes</a></li>
-            <li><a href="#sides">Sides</a></li>
-            <li><a href="#drinks">Drinks</a></li>
-        </ul>
-        <hr>
+      <ul class="nav-links">
+        <li><a href="#waffles">Waffles</a></li>
+        <li><a href="#french-toast">French Toast</a></li>
+        <li><a href="#pancakes">Pancakes</a></li>
+        <li><a href="#sides">Sides</a></li>
+        <li><a href="#drinks">Drinks</a></li>
+      </ul>
+      <hr />
     </nav>
 
-
-        <!------------------------   MODAL   ------------------------------------------>
-
+    <!------------------------   MODAL   ------------------------------------------>
 
     <div id="modal" class="modal">
-        <div class="modal-content-container">
-            <span class="closeBtn" id="closeBtn">&times;</span>
-
-            <div class="modal-item-info"></div>
-
-                <hr>
-
-                    <div class="customize-order">
-
-                        <div class="free-syrups">
-                            <h3>Choose Syrup</h3>
-
-                            <div class="flexed-modal-item">
-                            
-                                <div>
-                                <input checked="true" type="radio" name="free-syrup" value="Maple Syrup" id="maple" class="free-checked modal-to-cart">
-                                <label for="maple">Maple</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="free-syrup" value="Strawberry Syrup" id="strawberry" class="free-checked modal-to-cart">
-                                <label for="strawberry">Strawberry</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="free-syrup" value="Blueberry Syrup" id="blueberry" class="free-checked modal-to-cart">
-                                <label for="blueberry">Blueberry</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="free-syrup" value="Honey" id="honey" class="free-checked modal-to-cart">
-                                <label for="honey">Honey</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="free-syrup" value="Chocolate Syrup" id="chocolate" class="free-checked modal-to-cart">
-                                <label for="chocolate">Chocolate</label>
-                                </div>
-
-                            </div>
-                        </div>
-
-                     <hr>
-
-                        <div class="toppings">
-
-                            <h3>Toppings</h3>
-
-                            <div class="flex-modal-extra-items">
-                                <div>
-                                <input type="checkbox" name="topping" value="Bananas" id="banana" class="check modal-to-cart">
-                                <label for="banana">Banana<p class="modal-extra-price">$1.15</p></label>
-                 
-                                </div>
-                                <div>
-                                <input type="checkbox" name="berries" value="Mixed Berries" id="berries" class="check modal-to-cart">
-                                <label for="berries">Mixed Berries<p class="modal-extra-price">$2.00</p></label>
-                                
-                                </div>
-                                <div>
-                                <input type="checkbox" name="pecans" value="Pecans" id="pecans" class="check modal-to-cart">
-                                <label for="pecans">Carmel Roasted Pecans<p class="modal-extra-price">$1.75</p></label>
-                                
-                                </div>
-
-                                <div>
-                                    <input type="checkbox" name="whippedcream" value="Whipped Cream" id="whippedcream" class="check modal-to-cart">
-                                    <label for="whippedcream">Whipped Cream<p>$0.50</p></label>
-                                    
-                                </div>
-
-                                <div>
-                                <input type="checkbox" name="powdered sugar" value="Powdered Sugar" id="psugar" class="check modal-to-cart">
-                                <label for="psugar">Powdered Sugar<p class="modal-extra-price">$0.50</p></label>
-                                
-                                </div>
-                                <div>
-                                    <input type="checkbox" name="Pbutter" value="Peanut Butter" id="Pbutter" class="check modal-to-cart">
-                                    <label for="Pbutter">Peanut Butter<p>$1.25</p></label>
-                                    
-                                    </div>
-                                <div>
-                                <input type="checkbox" name="butter" value="Butter" id="butter" class="free-checked modal-to-cart">
-                                <label for="butter">Butter<p>Free</p></label>
-                                
-                                </div>
-
-                            </div>
-                        </div>
-
-                     <hr>
-
-                        <div class="extra-syrup">
-
-                            <h3>Extra Syrup</h3>
-
-                            <div class="flex-modal-extra-items">
-                                <div>
-
-                                <input type="checkbox" name="extra-syrup" value="Extra Maple Syrup" id="extra-maple" class="check modal-to-cart">
-                                <label for="extra-maple">Maple<p class="modal-extra-price">$0.50</p></label>
-    
-                                </div>
-                                <div>
-                                <input type="checkbox" name="extra-syrup" value="Extra Strawberry Syrup" id="extra-strawberry" class="check modal-to-cart">
-                                <label for="extra-strawberry">Strawberry<p class="modal-extra-price">$0.75</p></label>
-          
-                                </div>
-                                <div>
-                                <input type="checkbox" name="extra-syrup" value="Extra Blueberry Syrup" id="extra-blueberry" class="check modal-to-cart">
-                                <label for="extra-blueberry">Blueberry<p class="modal-extra-price">$0.75</p></label>
-                                
-                                </div>
-                                <div>
-                                <input type="checkbox" name="extra-syrup" value="Extra Honey" id="extra-honey" class="check modal-to-cart">
-                                <label for="extra-honey">Honey<p class="modal-extra-price">$0.50</p></label>
-                                
-                                </div>
-
-                                 <div>
-                                 <input type="checkbox" name="extra-syrup" value="Extra Caramel" id="extra-caramel" class="check modal-to-cart">
-                                 <label for="extra-caramel">Caramel<p class="modal-extra-price">$1.50</p></label>
-                                 </div>
-
-                                <div>
-                                <input type="checkbox" name="extra-syrup" value="Extra Chocolate Syrup" id="extra-chocolate" class="check modal-to-cart">
-                                <label for="extra-chocolate">Chocolate<p class="modal-extra-price">$1.25</p></label>
-                                </div>
-
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                        <div class="sides-modal">
-
-                            <div class="flexed-modal-item egg-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="eggs" value="Scrambled" id="scrambled" class="free-checked modal-to-cart">
-                                <label for="scrambled">Scrambled</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="eggs" value="Over Easy" id="over-easy" class="free-checked modal-to-cart">
-                                <label for="over-easy">Over Easy</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="eggs" value="Sunny Side Up" id="sunny-up" class="free-checked modal-to-cart">
-                                <label for="sunny-up">Sunny Side Up</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="eggs" value="Poached" id="poached" class="free-checked modal-to-cart">
-                                <label for="poached">Poached</label>
-                                </div>
-
-                            </div>
-
-                            <div class="flexed-modal-item potato-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="potatoes" value="Hashbrowns" id="hasbrowns" class="free-checked modal-to-cart">
-                                <label for="hashbrowns">Hashbrowns</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="potatoes" value="Skillet Veggie Mix" id="skillet" class="free-checked modal-to-cart">
-                                <label for="skillet">Skillet Vegetable Mix</label>
-                                </div>
-                                
-
-                            </div>
-
-                            <div class="flexed-modal-item meat-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="meat" value="Bacon" id="bacon" class="free-checked modal-to-cart">
-                                <label for="bacon">Bacon</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="meat" value="Sausage Links" id="sausage-links" class="free-checked modal-to-cart">
-                                <label for="sausage-links">Sausage Links</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="meat" value="Sausage Patties" id="sausage-pat" class="free-checked modal-to-cart">
-                                <label for="sausage-pat">Sausage Patties</label>
-                                </div>
-                                
-                            </div>
-
-                            
-
-                                <div class="avacado-flex avo-items">
-
-                                        <div>
-                                            <input type="checkbox" name="avacado-toast-t" value="With Tomato" id="t-avo" class="check modal-to-cart">
-                                            <label for="t-avo">With Tomato<p class="modal-extra-price">$1.00</p></label>                                   
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="avacado-toast-e" value="With Egg" id="e-avo" class="check modal-to-cart">
-                                            <label for="e-avo">With Poached Egg<p class="modal-extra-price">$2.00</p></label>
-                                        </div>
-                                        <div>
-                                            <input type="checkbox" name="avacado-toast-b" value="With Bacon" id="b-avo" class="check modal-to-cart">
-                                            <label for="b-avo">With Bacon<p>$2.50</p></label>
-                                        </div>
-                                </div>
-
-                            
-
-                        </div>
-
-                        <div class="drink-modal">
-
-                            <div class="coffee-cont">
-
-                                    <div class="flexed-modal-item">
-                                        <div>
-                                        <input checked="true" type="radio" name="coffee" value="Black" id="black-coffee" class="free-checked modal-to-cart">
-                                        <label for="black-coffee">Black</label>
-                                        </div>
-                                        <div>
-                                        <input type="radio" name="coffee" value="Cream" id="creamer" class="free-checked modal-to-cart">
-                                        <label for="creamer">Creamer</label>
-                                        </div>
-                                        <div>
-                                        <input type="radio" name="coffee" value="Almond Milk" id="almond-milk-creamer" class="free-checked modal-to-cart">
-                                        <label for="almond-milk-creamer">Almond Milk</label>
-                                        </div>
-                                        
-                                    </div>
-
-                                <hr>
-
-                                    <div class="coffee-options">
-
-                                        <div>
-                                        <input type="checkbox" name="coffee-extras" value="Iced" id="iced-coffee" class="free-checked modal-to-cart">
-                                        <label for="iced-coffee">Iced<p class="modal-extra-price">Free</p></label>
-                                        </div>
-
-                                        <div>
-                                        <input type="checkbox" name="coffee-extras" value="Sugar" id="sugar" class="free-checked modal-to-cart">
-                                        <label for="sugar">Sugar<p class="modal-extra-price">Free</p></label>
-                                        </div>
-        
-                                        <div>
-                                        <input type="checkbox" name="coffee-extras" value="Whipped Cream" id="whipped-cream" class="free-checked modal-to-cart">
-                                        <label for="whipped-cream">Whipped Cream<p class="modal-extra-price">Free</p></label>
-                                        </div>
-
-                                        <div>
-                                        <input type="checkbox" name="coffee-extras" value="Cinnamon" id="cinnamon-coffee" class="free-checked modal-to-cart">
-                                        <label for="cinnamon-coffee">Cinnamon<p class="modal-extra-price">Free</p></label>
-                                        </div>
-                                 
-                                    </div>
-                                 
-                            </div>
-
-                            <div class="tea-cont">
-
-                                    <div class="flexed-modal-item">
-                                        
-                                        <div>
-                                        <input checked="true" type="radio" name="tea" value="Green" id="green-t" class="free-checked modal-to-cart">
-                                        <label for="green-t">Green</label>
-                                        </div>
-
-                                        <div>
-                                        <input type="radio" name="tea" value="Black" id="black-t" class="free-checked modal-to-cart">
-                                        <label for="black-t">Black</label>
-                                        </div>
-
-                                        <div>
-                                        <input type="radio" name="tea" value="Earl Grey" id="earl-t" class="free-checked modal-to-cart">
-                                        <label for="earl-t">Earl Grey</label>
-                                        </div>
-
-                                        <div>
-                                        <input type="radio" name="tea" value="Herbal" id="herbal-t" class="free-checked modal-to-cart">
-                                        <label for="herbal-t">Herbal</label>
-                                        </div>
-
-                                        <div>
-                                        <input type="radio" name="tea" value="Chai" id="chai-t" class="free-checked modal-to-cart">
-                                        <label for="chai-t">Chai</label>
-                                        </div>
-
-                                    </div>
-
-                                    <hr>
-
-                                        <div class="tea-options">
-
-                                            <div>
-                                            <input type="checkbox" name="tea-extras" value="Iced" id="tea-iced" class="free-checked modal-to-cart">
-                                            <label for="tea-iced">Iced<p class="modal-extra-price">Free</p></label>
-                                            </div>
-
-                                            <div>
-                                            <input type="checkbox" name="tea-extras" value="Sugar" id="tea-sugar" class="free-checked modal-to-cart">
-                                            <label for="tea-sugar">Sugar<p class="modal-extra-price">Free</p></label>
-                                            </div>
-            
-                                            <div>
-                                            <input type="checkbox" name="tea-extras" value="Honey" id="tea-honey" class="free-checked modal-to-cart">
-                                            <label for="tea-honey">Honey<p class="modal-extra-price">Free</p></label>
-                                            </div>
-
-                                            <div>
-                                            <input type="checkbox" name="tea-extras" value="Milk" id="tea-milk" class="free-checked modal-to-cart">
-                                            <label for="tea-milk">Milk<p class="modal-extra-price">Free</p></label>
-                                            </div>
-
-                                        </div>
-                            </div> 
-
-                            <div class="flexed-modal-item juice-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="juice" value="Orange" id="orange" class="free-checked modal-to-cart">
-                                <label for="orange">Orange</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="juice" value="Apple" id="apple" class="free-checked modal-to-cart">
-                                <label for="apple">Apple</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="juice" value="Mango" id="mango" class="free-checked modal-to-cart">
-                                <label for="mango">Mango</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="juice" value="Pineapple" id="pineapple" class="free-checked modal-to-cart">
-                                <label for="pineapple">Pineapple</label>
-                                </div>
-                                
-                            </div>
-
-                            <div class="flexed-modal-item milk-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="milk" value="Plain" id="milk-p" class="free-checked modal-to-cart">
-                                <label for="milk-p">Plain</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="milk" value="Chocolate" id="milk-c" class="free-checked modal-to-cart">
-                                <label for="milk-c">Chocolate</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="milk" value="Strawberry" id="milk-s" class="free-checked modal-to-cart">
-                                <label for="milk-s">Strawberry</label>
-                                </div>
-                                
-                            </div>
-
-                            <div class="flexed-modal-item almond-milk-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="almond-milk" value="Plain" id="almond-milk-p" class="free-checked modal-to-cart">
-                                <label for="almond-milk-p">Plain</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="almond-milk" value="Chocolate" id="almond-milk-c" class="free-checked modal-to-cart">
-                                <label for="almond-milk-c">Chocolate</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="almond-milk" value="Strawberry" id="almond-milk-s" class="free-checked modal-to-cart">
-                                <label for="almond-milk-s">Strawberry</label>
-                                </div>
-                                
-                            </div>
-
-                            <div class="flexed-modal-item water-items">
-                                
-                                <div>
-                                <input checked="true" type="radio" name="water" value="Plain" id="plainW" class="free-checked modal-to-cart">
-                                <label for="plainW">Plain</label>
-                                </div>
-                                <div>
-                                <input type="radio" name="water" value="With Lemon" id="lemonW" class="free-checked modal-to-cart">
-                                <label for="lemonW">With Lemon</label>
-                                </div>
-                                
-                            </div>
-
-                        </div>
-
-
-                        <hr>
-
-                        <div class="add-to-cart">
-
-                            <div class="add-container">
-                                <button disabled="true" id="minus-main-order" class="minus-btn"><i class="fas fa-minus"></i></button>
-                            <input class="num-main-order" id="num-main-order" type="number" min="0" max="99" value="1" readonly>
-                                <button id="plus-main-order" class="add-btn"><i class="fas fa-plus"></i></button>
-                            </div>
-
-                            <button class="add-to-cart-btn" id="add-to-cart-btn">Add To Cart</button>
-                            <p class="modal-total" style="text-decoration: underline;">Total: $<span class="final-total-modal"></span></p>
-
-                        </div>
-                    
-
-        </div> 
+      <div class="modal-content-container">
+        <span class="closeBtn" id="closeBtn">&times;</span>
+
+        <div class="modal-item-info"></div>
+
+        <hr />
+
+        <div class="customize-order">
+          <div class="free-syrups">
+            <h3>Choose Syrup</h3>
+
+            <div class="flexed-modal-item">
+              <div>
+                <input
+                  checked="true"
+                  type="radio"
+                  name="free-syrup"
+                  value="Maple Syrup"
+                  id="maple"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="maple">Maple</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="free-syrup"
+                  value="Strawberry Syrup"
+                  id="strawberry"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="strawberry">Strawberry</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="free-syrup"
+                  value="Blueberry Syrup"
+                  id="blueberry"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="blueberry">Blueberry</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="free-syrup"
+                  value="Honey"
+                  id="honey"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="honey">Honey</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="free-syrup"
+                  value="Chocolate Syrup"
+                  id="chocolate"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="chocolate">Chocolate</label>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="toppings">
+            <h3>Toppings</h3>
+
+            <div class="flex-modal-extra-items">
+              <div>
+                <input
+                  type="checkbox"
+                  name="topping"
+                  value="Bananas"
+                  id="banana"
+                  class="check modal-to-cart"
+                />
+                <label for="banana"
+                  >Banana
+                  <p class="modal-extra-price">$1.15</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="berries"
+                  value="Mixed Berries"
+                  id="berries"
+                  class="check modal-to-cart"
+                />
+                <label for="berries"
+                  >Mixed Berries
+                  <p class="modal-extra-price">$2.00</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="pecans"
+                  value="Pecans"
+                  id="pecans"
+                  class="check modal-to-cart"
+                />
+                <label for="pecans"
+                  >Carmel Roasted Pecans
+                  <p class="modal-extra-price">$1.75</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="whippedcream"
+                  value="Whipped Cream"
+                  id="whippedcream"
+                  class="check modal-to-cart"
+                />
+                <label for="whippedcream"
+                  >Whipped Cream
+                  <p>$0.50</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="powdered sugar"
+                  value="Powdered Sugar"
+                  id="psugar"
+                  class="check modal-to-cart"
+                />
+                <label for="psugar"
+                  >Powdered Sugar
+                  <p class="modal-extra-price">$0.50</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="Pbutter"
+                  value="Peanut Butter"
+                  id="Pbutter"
+                  class="check modal-to-cart"
+                />
+                <label for="Pbutter"
+                  >Peanut Butter
+                  <p>$1.25</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="butter"
+                  value="Butter"
+                  id="butter"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="butter"
+                  >Butter
+                  <p>Free</p></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="extra-syrup">
+            <h3>Extra Syrup</h3>
+
+            <div class="flex-modal-extra-items">
+              <div>
+                <input
+                  type="checkbox"
+                  name="extra-syrup"
+                  value="Extra Maple Syrup"
+                  id="extra-maple"
+                  class="check modal-to-cart"
+                />
+                <label for="extra-maple"
+                  >Maple
+                  <p class="modal-extra-price">$0.50</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="extra-syrup"
+                  value="Extra Strawberry Syrup"
+                  id="extra-strawberry"
+                  class="check modal-to-cart"
+                />
+                <label for="extra-strawberry"
+                  >Strawberry
+                  <p class="modal-extra-price">$0.75</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="extra-syrup"
+                  value="Extra Blueberry Syrup"
+                  id="extra-blueberry"
+                  class="check modal-to-cart"
+                />
+                <label for="extra-blueberry"
+                  >Blueberry
+                  <p class="modal-extra-price">$0.75</p></label
+                >
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="extra-syrup"
+                  value="Extra Honey"
+                  id="extra-honey"
+                  class="check modal-to-cart"
+                />
+                <label for="extra-honey"
+                  >Honey
+                  <p class="modal-extra-price">$0.50</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="extra-syrup"
+                  value="Extra Caramel"
+                  id="extra-caramel"
+                  class="check modal-to-cart"
+                />
+                <label for="extra-caramel"
+                  >Caramel
+                  <p class="modal-extra-price">$1.50</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="extra-syrup"
+                  value="Extra Chocolate Syrup"
+                  id="extra-chocolate"
+                  class="check modal-to-cart"
+                />
+                <label for="extra-chocolate"
+                  >Chocolate
+                  <p class="modal-extra-price">$1.25</p></label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sides-modal">
+          <div class="flexed-modal-item egg-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="eggs"
+                value="Scrambled"
+                id="scrambled"
+                class="free-checked modal-to-cart"
+              />
+              <label for="scrambled">Scrambled</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="eggs"
+                value="Over Easy"
+                id="over-easy"
+                class="free-checked modal-to-cart"
+              />
+              <label for="over-easy">Over Easy</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="eggs"
+                value="Sunny Side Up"
+                id="sunny-up"
+                class="free-checked modal-to-cart"
+              />
+              <label for="sunny-up">Sunny Side Up</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="eggs"
+                value="Poached"
+                id="poached"
+                class="free-checked modal-to-cart"
+              />
+              <label for="poached">Poached</label>
+            </div>
+          </div>
+
+          <div class="flexed-modal-item potato-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="potatoes"
+                value="Hashbrowns"
+                id="hasbrowns"
+                class="free-checked modal-to-cart"
+              />
+              <label for="hashbrowns">Hashbrowns</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="potatoes"
+                value="Skillet Veggie Mix"
+                id="skillet"
+                class="free-checked modal-to-cart"
+              />
+              <label for="skillet">Skillet Vegetable Mix</label>
+            </div>
+          </div>
+
+          <div class="flexed-modal-item meat-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="meat"
+                value="Bacon"
+                id="bacon"
+                class="free-checked modal-to-cart"
+              />
+              <label for="bacon">Bacon</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="meat"
+                value="Sausage Links"
+                id="sausage-links"
+                class="free-checked modal-to-cart"
+              />
+              <label for="sausage-links">Sausage Links</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="meat"
+                value="Sausage Patties"
+                id="sausage-pat"
+                class="free-checked modal-to-cart"
+              />
+              <label for="sausage-pat">Sausage Patties</label>
+            </div>
+          </div>
+
+          <div class="avacado-flex avo-items">
+            <div>
+              <input
+                type="checkbox"
+                name="avacado-toast-t"
+                value="With Tomato"
+                id="t-avo"
+                class="check modal-to-cart"
+              />
+              <label for="t-avo"
+                >With Tomato
+                <p class="modal-extra-price">$1.00</p></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="avacado-toast-e"
+                value="With Egg"
+                id="e-avo"
+                class="check modal-to-cart"
+              />
+              <label for="e-avo"
+                >With Poached Egg
+                <p class="modal-extra-price">$2.00</p></label
+              >
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="avacado-toast-b"
+                value="With Bacon"
+                id="b-avo"
+                class="check modal-to-cart"
+              />
+              <label for="b-avo"
+                >With Bacon
+                <p>$2.50</p></label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="drink-modal">
+          <div class="coffee-cont">
+            <div class="flexed-modal-item">
+              <div>
+                <input
+                  checked="true"
+                  type="radio"
+                  name="coffee"
+                  value="Black"
+                  id="black-coffee"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="black-coffee">Black</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="coffee"
+                  value="Cream"
+                  id="creamer"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="creamer">Creamer</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="coffee"
+                  value="Almond Milk"
+                  id="almond-milk-creamer"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="almond-milk-creamer">Almond Milk</label>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="coffee-options">
+              <div>
+                <input
+                  type="checkbox"
+                  name="coffee-extras"
+                  value="Iced"
+                  id="iced-coffee"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="iced-coffee"
+                  >Iced
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="coffee-extras"
+                  value="Sugar"
+                  id="sugar"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="sugar"
+                  >Sugar
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="coffee-extras"
+                  value="Whipped Cream"
+                  id="whipped-cream"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="whipped-cream"
+                  >Whipped Cream
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="coffee-extras"
+                  value="Cinnamon"
+                  id="cinnamon-coffee"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="cinnamon-coffee"
+                  >Cinnamon
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="tea-cont">
+            <div class="flexed-modal-item">
+              <div>
+                <input
+                  checked="true"
+                  type="radio"
+                  name="tea"
+                  value="Green"
+                  id="green-t"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="green-t">Green</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="tea"
+                  value="Black"
+                  id="black-t"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="black-t">Black</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="tea"
+                  value="Earl Grey"
+                  id="earl-t"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="earl-t">Earl Grey</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="tea"
+                  value="Herbal"
+                  id="herbal-t"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="herbal-t">Herbal</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  name="tea"
+                  value="Chai"
+                  id="chai-t"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="chai-t">Chai</label>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="tea-options">
+              <div>
+                <input
+                  type="checkbox"
+                  name="tea-extras"
+                  value="Iced"
+                  id="tea-iced"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="tea-iced"
+                  >Iced
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="tea-extras"
+                  value="Sugar"
+                  id="tea-sugar"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="tea-sugar"
+                  >Sugar
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="tea-extras"
+                  value="Honey"
+                  id="tea-honey"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="tea-honey"
+                  >Honey
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+
+              <div>
+                <input
+                  type="checkbox"
+                  name="tea-extras"
+                  value="Milk"
+                  id="tea-milk"
+                  class="free-checked modal-to-cart"
+                />
+                <label for="tea-milk"
+                  >Milk
+                  <p class="modal-extra-price">Free</p></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="flexed-modal-item juice-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="juice"
+                value="Orange"
+                id="orange"
+                class="free-checked modal-to-cart"
+              />
+              <label for="orange">Orange</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="juice"
+                value="Apple"
+                id="apple"
+                class="free-checked modal-to-cart"
+              />
+              <label for="apple">Apple</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="juice"
+                value="Mango"
+                id="mango"
+                class="free-checked modal-to-cart"
+              />
+              <label for="mango">Mango</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="juice"
+                value="Pineapple"
+                id="pineapple"
+                class="free-checked modal-to-cart"
+              />
+              <label for="pineapple">Pineapple</label>
+            </div>
+          </div>
+
+          <div class="flexed-modal-item milk-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="milk"
+                value="Plain"
+                id="milk-p"
+                class="free-checked modal-to-cart"
+              />
+              <label for="milk-p">Plain</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="milk"
+                value="Chocolate"
+                id="milk-c"
+                class="free-checked modal-to-cart"
+              />
+              <label for="milk-c">Chocolate</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="milk"
+                value="Strawberry"
+                id="milk-s"
+                class="free-checked modal-to-cart"
+              />
+              <label for="milk-s">Strawberry</label>
+            </div>
+          </div>
+
+          <div class="flexed-modal-item almond-milk-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="almond-milk"
+                value="Plain"
+                id="almond-milk-p"
+                class="free-checked modal-to-cart"
+              />
+              <label for="almond-milk-p">Plain</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="almond-milk"
+                value="Chocolate"
+                id="almond-milk-c"
+                class="free-checked modal-to-cart"
+              />
+              <label for="almond-milk-c">Chocolate</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="almond-milk"
+                value="Strawberry"
+                id="almond-milk-s"
+                class="free-checked modal-to-cart"
+              />
+              <label for="almond-milk-s">Strawberry</label>
+            </div>
+          </div>
+
+          <div class="flexed-modal-item water-items">
+            <div>
+              <input
+                checked="true"
+                type="radio"
+                name="water"
+                value="Plain"
+                id="plainW"
+                class="free-checked modal-to-cart"
+              />
+              <label for="plainW">Plain</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="water"
+                value="With Lemon"
+                id="lemonW"
+                class="free-checked modal-to-cart"
+              />
+              <label for="lemonW">With Lemon</label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="add-to-cart">
+          <div class="add-container">
+            <button disabled="true" id="minus-main-order" class="minus-btn">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input
+              class="num-main-order"
+              id="num-main-order"
+              type="number"
+              min="0"
+              max="99"
+              value="1"
+              readonly
+            />
+            <button id="plus-main-order" class="add-btn">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+
+          <button class="add-to-cart-btn" id="add-to-cart-btn">
+            Add To Cart
+          </button>
+          <p class="modal-total" style="text-decoration: underline">
+            Total: $<span class="final-total-modal"></span>
+          </p>
+        </div>
+      </div>
     </div>
 
-            <!------------------------   MOBILE CART BTN   ------------------------------------------>
-
+    <!------------------------   MOBILE CART BTN   ------------------------------------------>
 
     <h2 class="menu-top" id="waffles">Waffles</h2>
 
-    <section class="waffles menu-flexed" >
+    <section class="waffles menu-flexed">
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://www.tasteandtellblog.com/wp-content/uploads/2020/01/Best-Waffle-Recipe-tasteandtellblog.com-1.jpg"
+          alt="waffle"
+        />
+        <h3 class="item-name">The Original</h3>
+        <p class="item-description">
+          A batter forged from the trials and errors of our grandmothers. This
+          mad concoction of flour and eggs - along with our secret formula -
+          will take you back to the family dinner table with every bite.
+        </p>
+        <h3 class="item-price">$9.00</h3>
+      </div>
 
-        
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxaEAe_EuS5Q63fdUyCDILLvt-9oXTIL5lQ&usqp=CAU"
+          alt="banana and chocolate chip waffle"
+        />
+        <h3 class="item-name">Banana Chocolate Chip</h3>
+        <p class="item-description">
+          What's batter than a world class waffle? A waffle piled high with
+          bananas of course. Ripe bananas flown in from the equator every
+          Tuesday bring just the right amount of potassium to the table.
+        </p>
+        <h3 class="item-price">$10.50</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://www.tasteandtellblog.com/wp-content/uploads/2020/01/Best-Waffle-Recipe-tasteandtellblog.com-1.jpg" alt="waffle">
-            <h3 class="item-name">The Original</h3>
-            <p class="item-description">A batter forged from the trials and errors of our grandmothers. This mad concoction of flour and eggs - along with our secret formula - will take you back to the family dinner table with every bite.</p>
-            <h3 class="item-price">$9.00</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://media-cdn.tripadvisor.com/media/photo-s/11/45/52/f4/waffle-with-fruit.jpg"
+          alt="waffle with berries"
+        />
+        <h3 class="item-name">Berried Alive</h3>
+        <p class="item-description">
+          We promise you a waffle is somewhere beneath those mountainous
+          berries. Grab a fork and dig in before it's too late! Each berry is
+          hand picked from local farmer's markets for the freshest possible
+          taste.
+        </p>
+        <h3 class="item-price">$11.25</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPxaEAe_EuS5Q63fdUyCDILLvt-9oXTIL5lQ&usqp=CAU" alt="banana and chocolate chip waffle">
-            <h3 class="item-name">Banana Chocolate Chip</h3>
-            <p class="item-description">What's batter than a world class waffle? A waffle piled high with bananas of course. Ripe bananas flown in from the equator every Tuesday bring just the right amount of potassium to the table.</p>
-            <h3 class="item-price">$10.50</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://lifeloveandgoodfood.com/wp-content/uploads/2020/08/chicken-and-waffles_12_1200x1200-720x540.jpg"
+          alt="chicken and waffles"
+        />
+        <h3 class="item-name">Chicken & Waffles</h3>
+        <p class="item-description">
+          Southern fried chicken atop a world renowned waffle. Loosen them
+          britches and get ready for the food coma that follows.
+        </p>
+        <h3 class="item-price">$14.00</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://media-cdn.tripadvisor.com/media/photo-s/11/45/52/f4/waffle-with-fruit.jpg" alt="waffle with berries">
-            <h3 class="item-name">Berried Alive</h3>
-            <p class="item-description">We promise you a waffle is somewhere beneath those mountainous berries. Grab a fork and dig in before it's too late! Each berry is hand picked from local farmer's markets for the freshest possible taste.</p>
-            <h3 class="item-price">$11.25</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F2900185.jpg"
+          alt="chocolate waffle"
+        />
+        <h3 class="item-name">Chocolate Lover's</h3>
+        <p class="item-description">
+          We infuse our famous batter with the world's finest cocoa and present
+          to you a plate of chocolate bliss. Not for the faint of heart.
+        </p>
+        <h3 class="item-price">$9.50</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://lifeloveandgoodfood.com/wp-content/uploads/2020/08/chicken-and-waffles_12_1200x1200-720x540.jpg" alt="chicken and waffles">
-            <h3 class="item-name">Chicken & Waffles</h3>
-            <p class="item-description">Southern fried chicken atop a world renowned waffle. Loosen them britches and get ready for the food coma that follows.</p>
-            <h3 class="item-price">$14.00</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://data.thefeedfeed.com/recommended/post_4098447.jpeg"
+          alt="cinnamon roll waffle"
+        />
+        <h3 class="item-name">Cinnamon Roll&sup2;</h3>
+        <p class="item-description">
+          It's not often that we skip on the syrup, but this cinnamon delight
+          comes topped with enough homemade icing to send you on a legendary
+          sugar high.
+        </p>
+        <h3 class="item-price">$10.00</h3>
+      </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://kitchencookbook.net/wp-content/uploads/2018/09/Red-waffles-e1538125100569.png"
+          alt="red velvet waffle"
+        />
+        <h3 class="item-name">The Royal Velvet</h3>
+        <p class="item-description">
+          Get the same feeling those fancy-schmancy pants do while eating in
+          their high towers without all that political fuss. Whipped cream that
+          we prepare by hand every morning crowns this masterpiece.
+        </p>
+        <h3 class="item-price">$12.00</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F2900185.jpg" alt="chocolate waffle">
-            <h3 class="item-name">Chocolate Lover's</h3>
-            <p class="item-description">We infuse our famous batter with the world's finest cocoa and present to you a plate of chocolate bliss. Not for the faint of heart.</p>
-            <h3 class="item-price">$9.50</h3>
-        </div>
-
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://data.thefeedfeed.com/recommended/post_4098447.jpeg" alt="cinnamon roll waffle">
-            <h3 class="item-name">Cinnamon Roll&sup2;</h3>
-            <p class="item-description">It's not often that we skip on the syrup, but this cinnamon delight comes topped with enough homemade icing to send you on a legendary sugar high.</p>
-            <h3 class="item-price">$10.00</h3>
-        </div>
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://kitchencookbook.net/wp-content/uploads/2018/09/Red-waffles-e1538125100569.png" alt="red velvet waffle">
-            <h3 class="item-name">The Royal Velvet</h3>
-            <p class="item-description">Get the same feeling those fancy-schmancy pants do while eating in their high towers without all that political fuss. Whipped cream that we prepare by hand every morning crowns this masterpiece.</p>
-            <h3 class="item-price">$12.00</h3>
-        </div>
-
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://food.theffeed.com/wp-content/uploads/sites/7/2017/05/1492620138-waffle-smores-3-e1599068226561.jpg" alt="smores waffle">
-            <h3 class="item-name">Give Me S'more</h3>
-            <p class="item-description">A fine stack of graham cracker infused waffles, covered with melting marshmellow and chocolate.</p>
-            <h3 class="item-price">$11.50</h3>
-        </div>
-
-
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://food.theffeed.com/wp-content/uploads/sites/7/2017/05/1492620138-waffle-smores-3-e1599068226561.jpg"
+          alt="smores waffle"
+        />
+        <h3 class="item-name">Give Me S'more</h3>
+        <p class="item-description">
+          A fine stack of graham cracker infused waffles, covered with melting
+          marshmellow and chocolate.
+        </p>
+        <h3 class="item-price">$11.50</h3>
+      </div>
     </section>
 
     <h2 class="menu" id="french-toast">French Toast</h2>
 
-    <section class="french-toast menu-flexed" >
+    <section class="french-toast menu-flexed">
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://www.aspicyperspective.com/wp-content/uploads/2019/09/How-To-Make-French-Toast-7.jpg"
+          alt="french toast"
+        />
+        <h3 class="item-name">Jane Ordinaire</h3>
+        <p class="item-description">
+          A fresh baquette madly doused in our famous batter. A savory meal that
+          has surrendered more than a few stomachs.
+        </p>
+        <h3 class="item-price">$10.00</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://www.aspicyperspective.com/wp-content/uploads/2019/09/How-To-Make-French-Toast-7.jpg" alt="french toast">
-            <h3 class="item-name">Jane Ordinaire</h3>
-            <p class="item-description">A fresh baquette madly doused in our famous batter. A savory meal that has surrendered more than a few stomachs.</p>
-            <h3 class="item-price">$10.00</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://images.squarespace-cdn.com/content/v1/55521cc5e4b0e3bbbdd84a3a/1586229317779-ARMSMIX21UBG0XO8F06T/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/ALDI+easter+brunch+french+toast+with+whipped+cream+and+berries-42.jpg?format=2500w"
+          alt="french toast with berries"
+        />
+        <h3 class="item-name">Berry Toast</h3>
+        <p class="item-description">
+          Take our mouth watering Jane Ordinaire and smother it with berries and
+          whipped cream. There's so much fruit it almost seems healthy.
+        </p>
+        <h3 class="item-price">$12.00</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://images.squarespace-cdn.com/content/v1/55521cc5e4b0e3bbbdd84a3a/1586229317779-ARMSMIX21UBG0XO8F06T/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/ALDI+easter+brunch+french+toast+with+whipped+cream+and+berries-42.jpg?format=2500w" alt="french toast with berries">
-            <h3 class="item-name">Berry Toast</h3>
-            <p class="item-description">Take our mouth watering Jane Ordinaire and smother it with berries and whipped cream. There's so much fruit it almost seems healthy.</p>
-            <h3 class="item-price">$12.00</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://www.cookinwithmima.com/wp-content/uploads/2019/07/cinnamon-swirl-french-toast-4-500x375.jpg"
+          alt="cinnamon toast"
+        />
+        <h3 class="item-name">Cinnamon Toast Crunch</h3>
+        <p class="item-description">
+          Blended into our cinnamon baquettes are a mix of sugars and spices
+          that could bring the Pillsbury Dough boy to his soft knees. Finish it
+          off with our homemade icing and you got yourself the eigth wonder of
+          the world.
+        </p>
+        <h3 class="item-price">$11.50</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://www.cookinwithmima.com/wp-content/uploads/2019/07/cinnamon-swirl-french-toast-4-500x375.jpg" alt="cinnamon toast">
-            <h3 class="item-name">Cinnamon Toast Crunch</h3>
-            <p class="item-description">Blended into our cinnamon baquettes are a mix of sugars and spices that could bring the Pillsbury Dough boy to his soft knees. Finish it off with our homemade icing and you got yourself the eigth wonder of the world.</p>
-            <h3 class="item-price">$11.50</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://s3.amazonaws.com/blenderbottle-recipe-book/images/files/AZMXvMJnCPutrxN5Y-Chocolate%20French%20Toast.jpg"
+          alt="chocolate toast"
+        />
+        <h3 class="item-name">Chocolate Toast</h3>
+        <p class="item-description">
+          Fresh cocoa blended into our baquettes make this a maddening batter
+          concoction for any chocolate connoisseur.
+        </p>
+        <h3 class="item-price">$10.00</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://s3.amazonaws.com/blenderbottle-recipe-book/images/files/AZMXvMJnCPutrxN5Y-Chocolate%20French%20Toast.jpg" alt="chocolate toast">
-            <h3 class="item-name">Chocolate Toast</h3>
-            <p class="item-description">Fresh cocoa blended into our baquettes make this a maddening batter concoction for any chocolate connoisseur.</p>
-            <h3 class="item-price">$10.00</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://parade.com/wp-content/uploads/2017/02/Red-Velvet-French-Toast-with-Vanilla-Bean-Cheesecake-Filling-26-600x600.jpg"
+          alt="red velvet french toast"
+        />
+        <h3 class="item-name">The Red French</h3>
+        <p class="item-description">
+          Slices of toast soaked and smothered in layers of velvety batter.
+          Guarenteed redder than the guillotine lined streets of the French
+          revolution.
+        </p>
+        <h3 class="item-price">$10.75</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://parade.com/wp-content/uploads/2017/02/Red-Velvet-French-Toast-with-Vanilla-Bean-Cheesecake-Filling-26-600x600.jpg" alt="red velvet french toast">
-            <h3 class="item-name">The Red French</h3>
-            <p class="item-description">Slices of toast soaked and smothered in layers of velvety batter. Guarenteed redder than the guillotine lined streets of the French revolution.</p>
-            <h3 class="item-price">$10.75</h3>
-        </div>
-
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://thebakermama.com/wp-content/uploads/2015/08/IMG_5927.jpg" alt="french toast rolls">
-            <h3 class="item-name">Toasted Roll-Ups</h3>
-            <p class="item-description">Tiny cinnamon french toasts rolled into bite size morsels. Dip or drown them in a sauce of your choice.</p>
-            <h3 class="item-price">$8.00</h3>
-        </div>
-
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://thebakermama.com/wp-content/uploads/2015/08/IMG_5927.jpg"
+          alt="french toast rolls"
+        />
+        <h3 class="item-name">Toasted Roll-Ups</h3>
+        <p class="item-description">
+          Tiny cinnamon french toasts rolled into bite size morsels. Dip or
+          drown them in a sauce of your choice.
+        </p>
+        <h3 class="item-price">$8.00</h3>
+      </div>
     </section>
 
     <h2 class="menu" id="pancakes">Pancakes</h2>
 
-    <section class="pancakes menu-flexed" >
+    <section class="pancakes menu-flexed">
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2Farchive%2F8cfbcbb2919742682345681d469b7417a73e4dfe"
+          alt="stack of pancakes"
+        />
+        <h3 class="item-name">Stacks On Stacks</h3>
+        <p class="item-description">
+          Want to taste our delicious batter without all those annoying waffle
+          pockets hoarding your syrup? Bite into a stack of our fluffy pancakes.
+          Evenly distrubuted syrup not guarenteed.
+        </p>
+        <h3 class="item-price">$10.00</h3>
+      </div>
 
-       
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://bakingmischief.com/wp-content/uploads/2018/09/easy-banana-pancakes-for-two-image-square.jpg"
+          alt="banana pancakes"
+        />
+        <h3 class="item-name">Banana Blues</h3>
+        <p class="item-description">
+          Fluffy pancakes stuffed with bananas and blueberries. The only blues
+          you'll have is from not ordering more for the table.
+        </p>
+        <h3 class="item-price">$12.00</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco/k%2Farchive%2F8cfbcbb2919742682345681d469b7417a73e4dfe" alt="stack of pancakes">
-            <h3 class="item-name">Stacks On Stacks</h3>
-            <p class="item-description">Want to taste our delicious batter without all those annoying waffle pockets hoarding your syrup? Bite into a stack of our fluffy pancakes. Evenly distrubuted syrup not guarenteed.</p>
-            <h3 class="item-price">$10.00</h3>
-        </div>
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://bakerbynature.com/wp-content/uploads/2017/02/untitled-84-of-84-3.jpg"
+          alt="chocolate chip pancakes"
+        />
+        <h3 class="item-name">Chocolate Chip Discs</h3>
+        <p class="item-description">
+          Chips of chocolate strategically placed into our batter to make every
+          bite a small piece of heaven.
+        </p>
+        <h3 class="item-price">$11.50</h3>
+      </div>
 
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://bakingmischief.com/wp-content/uploads/2018/09/easy-banana-pancakes-for-two-image-square.jpg" alt="banana pancakes">
-            <h3 class="item-name">Banana Blues</h3>
-            <p class="item-description">Fluffy pancakes stuffed with bananas and blueberries. The only blues you'll have is from not ordering more for the table.</p>
-            <h3 class="item-price">$12.00</h3>
-        </div>
-
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://bakerbynature.com/wp-content/uploads/2017/02/untitled-84-of-84-3.jpg" alt="chocolate chip pancakes">
-            <h3 class="item-name">Chocolate Chip Discs</h3>
-            <p class="item-description">Chips of chocolate strategically placed into our batter to make every bite a small piece of heaven.</p>
-            <h3 class="item-price">$11.50</h3>
-        </div>
-
-        <div class="menu-item-container" id="modal-open">
-            <img class="item-picture" src="https://pricechopperready.com/home/wp-content/gallery/recipes/ButtermilkBaconPancakesBourbonMapleSyrup.jpg" alt="bacon pancakes">
-            <h3 class="item-name">Jake's Special</h3>
-            <p class="item-description">Inspired by a fictional character we idolize here in The Mad Batter's kitchen. You'll be singing praise for Jake's creation from start to finish.</p>
-            <h3 class="item-price">$13.00</h3>
-        </div>
-        
+      <div class="menu-item-container" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://pricechopperready.com/home/wp-content/gallery/recipes/ButtermilkBaconPancakesBourbonMapleSyrup.jpg"
+          alt="bacon pancakes"
+        />
+        <h3 class="item-name">Jake's Special</h3>
+        <p class="item-description">
+          Inspired by a fictional character we idolize here in The Mad Batter's
+          kitchen. You'll be singing praise for Jake's creation from start to
+          finish.
+        </p>
+        <h3 class="item-price">$13.00</h3>
+      </div>
     </section>
 
     <h2 class="menu" id="sides">Sides</h2>
 
-    <section class="sides menu-flexed" >
+    <section class="sides menu-flexed">
+      <div class="menu-item-container egg" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://cdn-prod.medicalnewstoday.com/content/images/articles/283/283659/a-basket-of-eggs.jpg"
+          alt="eggs"
+        />
+        <h3 class="item-name">Eggs</h3>
+        <p class="item-description">
+          The happiest free range chickens lay the best eggs. We stole those
+          eggs. Please don't tell the chickens.
+        </p>
+        <h3 class="item-price">$5.00</h3>
+      </div>
 
-        <div class="menu-item-container egg"  id="modal-open">
-            <img class="item-picture" src="https://cdn-prod.medicalnewstoday.com/content/images/articles/283/283659/a-basket-of-eggs.jpg" alt="eggs">
-            <h3 class="item-name">Eggs</h3>
-            <p class="item-description">The happiest free range chickens lay the best eggs. We stole those eggs. Please don't tell the chickens.</p>
-            <h3 class="item-price">$5.00</h3>
-        </div>
+      <div class="menu-item-container potatoes" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://timeincsecure-a.akamaihd.net/rtmp_uds/1260616200/201902/3477/1260616200_5997554272001_5997545713001-vs.jpg?pubId=1260616200&videoId=5997545713001&w=1280&h=720&q=90&c=cc"
+          alt="potatoes"
+        />
+        <h3 class="item-name">Potatoes</h3>
+        <p class="item-description">
+          The vegetable of the gods. Is there any possible way for a side of
+          potatoes to ruin a meal? We aren't about to be the ones to find out.
+        </p>
+        <h3 class="item-price">$3.50</h3>
+      </div>
 
-        <div class="menu-item-container potatoes"  id="modal-open">
-            <img class="item-picture" src="https://imagesvc.meredithcorp.io/v3/jumpstartpure/image?url=https://timeincsecure-a.akamaihd.net/rtmp_uds/1260616200/201902/3477/1260616200_5997554272001_5997545713001-vs.jpg?pubId=1260616200&videoId=5997545713001&w=1280&h=720&q=90&c=cc" alt="potatoes">
-            <h3 class="item-name">Potatoes</h3>
-            <p class="item-description">The vegetable of the gods. Is there any possible way for a side of potatoes to ruin a meal? We aren't about to be the ones to find out.</p>
-            <h3 class="item-price">$3.50</h3>
-        </div>
+      <div class="menu-item-container meat" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://cdn1.wolfermans.com/wcsstore/Wolfermans/images/catalog/15_50849_75c_01e_v01x.jpg"
+          alt="breakfast meats"
+        />
+        <h3 class="item-name">Meat</h3>
+        <p class="item-description">
+          Mouth watering breakfast meats from the fattest pigs we could find.
+        </p>
+        <h3 class="item-price">$4.25</h3>
+      </div>
 
-        <div class="menu-item-container meat"  id="modal-open">
-            <img class="item-picture" src="https://cdn1.wolfermans.com/wcsstore/Wolfermans/images/catalog/15_50849_75c_01e_v01x.jpg" alt="breakfast meats">
-            <h3 class="item-name">Meat</h3>
-            <p class="item-description">Mouth watering breakfast meats from the fattest pigs we could find.</p>
-            <h3 class="item-price">$4.25</h3>
-        </div>
-
-        <div class="menu-item-container avacado-toast"  id="modal-open">
-            <img class="item-picture" src="https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways.jpeg" alt="avocado toast">
-            <h3 class="item-name">The Millennial Bank Breaker</h3>
-            <p class="item-description">A famously overpriced meal that is guarenteed to leave you hungry while making your accountant cringe.</p>
-            <h3 class="item-price">$10.00</h3>
-        </div>
-        
+      <div class="menu-item-container avacado-toast" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://californiaavocado.com/wp-content/uploads/2020/07/California-Avocado-Toast-Three-Ways.jpeg"
+          alt="avocado toast"
+        />
+        <h3 class="item-name">The Millennial Bank Breaker</h3>
+        <p class="item-description">
+          A famously overpriced meal that is guarenteed to leave you hungry
+          while making your accountant cringe.
+        </p>
+        <h3 class="item-price">$10.00</h3>
+      </div>
     </section>
 
     <h2 class="menu" id="drinks">Drinks</h2>
 
     <section class="drinks menu-flexed">
+      <div class="menu-item-container coffee" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://img1.mashed.com/img/gallery/coffee-mistakes-youre-probably-making-at-home/intro-1594766282.jpg"
+          alt="coffee"
+        />
+        <h3 class="item-name">Coffee</h3>
+        <p class="item-description">
+          Beans from illycaffè ground fresh for every order. No need to get
+          fancy with your order, enjoy the bold and rich taste while
+          contemplating your day.
+        </p>
+        <h3 class="item-price">$2.50</h3>
+      </div>
 
-      
+      <div class="menu-item-container tea" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://static.toiimg.com/thumb/69385334.cms?width=680&height=512&imgsize=191579"
+          alt="tea"
+        />
+        <h3 class="item-name">Tea</h3>
+        <p class="item-description">
+          World renowned tea leaves packed into a bag and drowned in a cup of
+          boiling water.
+        </p>
+        <h3 class="item-price">$2.50</h3>
+      </div>
 
-        <div class="menu-item-container coffee" id="modal-open">
-            <img class="item-picture" src="https://img1.mashed.com/img/gallery/coffee-mistakes-youre-probably-making-at-home/intro-1594766282.jpg" alt="coffee">
-            <h3 class="item-name">Coffee</h3>
-            <p class="item-description">Beans from illycaffè ground fresh for every order. No need to get fancy with your order, enjoy the bold and rich taste while contemplating your day.</p>
-            <h3 class="item-price">$2.50</h3>
-        </div>
+      <div class="menu-item-container juice" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/orange-juice-1296x728-feature.jpg?w=1155&h=1528"
+          alt="orange juice"
+        />
+        <h3 class="item-name">Fresh Squeezed Juice</h3>
+        <p class="item-description">Cut, squeezed, and mixed daily.</p>
+        <h3 class="item-price">$3.75</h3>
+      </div>
 
-        <div class="menu-item-container tea" id="modal-open">
-            <img class="item-picture" src="https://static.toiimg.com/thumb/69385334.cms?width=680&height=512&imgsize=191579" alt="tea">
-            <h3 class="item-name">Tea</h3>
-            <p class="item-description">World renowned tea leaves packed into a bag and drowned in a cup of boiling water.</p>
-            <h3 class="item-price">$2.50</h3>
-        </div>
+      <div class="menu-item-container milk" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhIAOr82HRDxDj3GDumI1HN3i4mw7haKckQ&usqp=CAU"
+          alt="milk"
+        />
+        <h3 class="item-name">Milk</h3>
+        <p class="item-description">
+          Whole milk from the grassfed cows of our local farms.
+        </p>
+        <h3 class="item-price">$2.00</h3>
+      </div>
 
-        <div class="menu-item-container juice" id="modal-open">
-            <img class="item-picture" src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/orange-juice-1296x728-feature.jpg?w=1155&h=1528" alt="orange juice">
-            <h3 class="item-name">Fresh Squeezed Juice</h3>
-            <p class="item-description">Cut, squeezed, and mixed daily.</p>
-            <h3 class="item-price">$3.75</h3>
-        </div>
+      <div class="menu-item-container almond-milk" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://40aprons.com/wp-content/uploads/2019/07/how-to-make-almond-milk-2.jpg"
+          alt="almond milk"
+        />
+        <h3 class="item-name">Almond Milk</h3>
+        <p class="item-description">
+          Milk squeezed from the most exquisite free-range almonds.
+        </p>
+        <h3 class="item-price">$3.00</h3>
+      </div>
 
-        <div class="menu-item-container milk" id="modal-open">
-            <img class="item-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLhIAOr82HRDxDj3GDumI1HN3i4mw7haKckQ&usqp=CAU" alt="milk">
-            <h3 class="item-name">Milk</h3>
-            <p class="item-description">Whole milk from the grassfed cows of our local farms.</p>
-            <h3 class="item-price">$2.00</h3>
-        </div>
-
-        <div class="menu-item-container almond-milk" id="modal-open">
-            <img class="item-picture" src="https://40aprons.com/wp-content/uploads/2019/07/how-to-make-almond-milk-2.jpg" alt="almond milk">
-            <h3 class="item-name">Almond Milk</h3>
-            <p class="item-description">Milk squeezed from the most exquisite free-range almonds.</p>
-            <h3 class="item-price">$3.00</h3>
-        </div>
-
-        <div class="menu-item-container water" id="modal-open">
-            <img class="item-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3y8aEQIfvEET5rtHorALyibA4zbpRH8UtFQ&usqp=CAU" alt="almond milk">
-            <h3 class="item-name">Water</h3>
-            <p class="item-description">A glass of pristine liquid fused from hydrogen and oxygen. Some say this elixer is the true giver of life.</p>
-            <h3 class="item-price">$1.00</h3>
-        </div>
-        
+      <div class="menu-item-container water" id="modal-open">
+        <img
+          class="item-picture"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3y8aEQIfvEET5rtHorALyibA4zbpRH8UtFQ&usqp=CAU"
+          alt="almond milk"
+        />
+        <h3 class="item-name">Water</h3>
+        <p class="item-description">
+          A glass of pristine liquid fused from hydrogen and oxygen. Some say
+          this elixer is the true giver of life.
+        </p>
+        <h3 class="item-price">$1.00</h3>
+      </div>
     </section>
 
-        <script src="app.js"></script>
-        <script src="https://kit.fontawesome.com/44e20fa782.js" crossorigin="anonymous"></script>
-
-</body>
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/44e20fa782.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
