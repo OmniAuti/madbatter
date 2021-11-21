@@ -159,7 +159,7 @@ a {
   text-align: right;
   padding-right: 15px;
   line-height: calc(100% - 10px);
-  font-family: 'Londrina Outline', cursive;
+  font-family: "Londrina Outline", cursive;
 }
 
 .logo {
@@ -201,22 +201,23 @@ a {
   text-align: center;
   text-shadow: 0px 0px 5px #ba6fb4;
   margin: 64px 0px 0px 0px;
-  font-size: 1.1em;
+  font-size: 1.05em;
 }
 
 h5.logo-warp-one {
-  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: -2.5px;
   transform: rotateY(30deg) rotate(10deg) translateY(7px);
   -webkit-transform: rotateY(30deg) rotate(10deg) translateY(7px);
 }
 h5.logo-warp-two {
   padding-top: 5px;
+  margin: 64px 1px 0 1px;
   transform: translateY(1px);
   -webkit-transform: translateY(1px);
 }
 h5.logo-warp-three {
   padding-top: 5px;
-  padding-left: 5px;
   transform: rotateY(-25deg) rotate(-8deg) translateY(3px);
   -webkit-transform: rotateY(-25deg) rotate(-8deg) translateY(3px);
 }
@@ -249,17 +250,17 @@ h5.logo-warp-three {
   }
 
   h5.logo-warp-one {
-    padding-top: 0;
+    padding-top: 5px;
     transform: rotateY(30deg) rotate(10deg) translateY(13px);
     -webkit-transform: rotateY(30deg) rotate(10deg) translateY(13px);
   }
   h5.logo-warp-two {
-    padding-top: 0;
+    padding-top: 5px;
     transform: translateY(6px);
     -webkit-transform: translateY(6px);
   }
   h5.logo-warp-three {
-    padding-top: 0;
+    padding-top: 5px;
     transform: rotateY(-25deg) rotate(-8deg) translateY(8px);
     -webkit-transform: rotateY(-25deg) rotate(-8deg) translateY(8px);
   }
@@ -363,7 +364,6 @@ nav hr {
     border-radius: 0;
     border-left: none;
     border-bottom: 1px solid #000 !important;
-    
   }
 
   .nav-links {
@@ -393,7 +393,6 @@ nav hr {
 }
 
 @media (max-width: 374px) {
-
   nav {
     font-size: 0.75em;
   }
