@@ -231,4 +231,4 @@ orderBtn.addEventListener('click', () => {
     localStorage.clear()
 })
 
- // ORDER BUTTON
+ // BACK TO STORE

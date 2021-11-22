@@ -1,95 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="icon" href="img/icon.ico" type="image/icon">
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cartstyles.css">
+  <head>
+    <link rel="icon" href="img/icon.ico" type="image/icon" />
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cartstyles.css" />
     <title>The Mad Batter</title>
-</head>
-<body>
-        <!------------------------   MODAL   ------------------------------------------>
-
+  </head>
+  <body>
+    <!------------------------   MODAL   ------------------------------------------>
 
     <div class="modal-cont">
-        <div class="modal">
-            <h3>Thank You For Your Order!</h3>
-            <a class="empty-cart-link" href="index.html">Return To Store</a>
-        </div>
+      <div class="modal">
+        <h3>Thank You For Your Order!</h3>
+        <a class="empty-cart-link" href="index.html">Return To Store</a>
+      </div>
     </div>
 
-            <!------------------------  LOGO   ------------------------------------------>
-
+    <!------------------------  LOGO   ------------------------------------------>
 
     <div class="logo-cont">
-        <h1>The Mad Batter</h1>
-        <div class="logo"></div>
+      <h1>The Mad Batter</h1>
+      <div class="logo"></div>
     </div>
 
-            <!------------------------   CART  ------------------------------------------>
-
+    <!------------------------   CART  ------------------------------------------>
 
     <div class="cart-cont">
-    
-            <div class="title-cart">
-            <h2>Items In Cart</h2>
-            <button class="cart-item-remove" id="cart-item-remove"> <i class="fas fa-trash cart-item-remove"></i>Remove All</button>
-            </div>
+      <div class="title-cart">
+        <h2>Items In Cart</h2>
+        <button class="cart-item-remove" id="cart-item-remove">
+          <i class="fas fa-trash cart-item-remove"></i>Remove All
+        </button>
+      </div>
 
-        <hr>
+      <hr />
 
-     <div class="cart">
-
+      <div class="cart">
         <!--CART ITEMS WILL LOAD FROM LOCAL STORAGE-->
-       
-     </div>
+      </div>
 
-     <div class="linked-store">
-         <hr>
+      <div class="linked-store">
+        <hr />
         <a class="empty-cart-link" href="index.html">Return To Store</a>
-     </div>
-
-
+      </div>
     </div>
 
-            <!------------------------   TIP   ------------------------------------------>
-
+    <!------------------------   TIP   ------------------------------------------>
 
     <div class="total-cart-price-cont">
+      <div class="tip-btn-cont">
+        <button class="tip-btn tip-no tip-active">No Tip</button>
+        <button class="tip-btn tip-ten">10%</button>
+        <button class="tip-btn tip-fif">15%</button>
+        <button class="tip-btn tip-twe">20%</button>
+      </div>
 
-        <div class="tip-btn-cont">
-            <button class="tip-btn tip-no tip-active">No Tip</button>
-            <button class="tip-btn tip-ten">10%</button>
-            <button class="tip-btn tip-fif">15%</button>
-            <button class="tip-btn tip-twe">20%</button>
-        </div>
+      <!------------------------   PRICES   ------------------------------------------>
 
-        <!------------------------   PRICES   ------------------------------------------>
-
-
-        <div class="final-price-adjust-cont">
-            <h3>Cart Items<p class="final-cart-price-one">$0.00</p></h3>
-            <hr>
-            <h3>Tax 10.25%<p class="tax-price">$0.00</p></h3>
-            <hr>
-            <h3>Tip<p class="tip-price">$0.00</p></h3>
-            <hr>
-            <h2>Total<p class="final-total-price">$0.00</p></h2>
-        </div>
-        
+      <div class="final-price-adjust-cont">
+        <h3>
+          Cart Items
+          <p class="final-cart-price-one">$0.00</p>
+        </h3>
+        <hr />
+        <h3>
+          Tax 10.25%
+          <p class="tax-price">$0.00</p>
+        </h3>
+        <hr />
+        <h3>
+          Tip
+          <p class="tip-price">$0.00</p>
+        </h3>
+        <hr />
+        <h2>
+          Total
+          <p class="final-total-price">$0.00</p>
+        </h2>
+      </div>
     </div>
 
-            <!------------------------   ORDER BTN   ------------------------------------------>
-
+    <!------------------------   ORDER BTN   ------------------------------------------>
 
     <div class="order-cont">
-        <button class="order-btn" id="order-btn">Order</button>
+      <button class="order-btn" id="order-btn">Order</button>
     </div>
-    
-    <script src="https://kit.fontawesome.com/44e20fa782.js" crossorigin="anonymous"></script>
-    <script src="checkout.js"></script>
 
-</body>
+    <script
+      src="https://kit.fontawesome.com/44e20fa782.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="checkout.js"></script>
+  </body>
 </html>
