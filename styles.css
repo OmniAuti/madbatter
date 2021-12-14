@@ -153,6 +153,7 @@ a {
   }
 }
 
+
 .logo-name {
   font-size: 5rem;
   color: #fff;
@@ -161,6 +162,9 @@ a {
   line-height: calc(100% - 10px);
   font-family: "Londrina Outline", cursive;
 }
+
+
+
 
 .logo {
   height: 198px;
@@ -256,6 +260,43 @@ h5.logo-warp-three {
   }
 }
 
+@media (min-width: 1400px) {
+  .hero {
+    background-size: cover;
+  }
+
+  .logo-name {
+    font-size: 7.5rem;
+  }
+
+  .logo {
+    height: 299px;
+    width: 320px;
+  }
+
+  .logo-two {
+    height: 199px;
+    width: 322px;
+  }
+
+  .logo h5 {
+    margin: 100px 2px 0px 2px;
+    font-size: 1.5em;
+  }
+
+  h5.logo-warp-one {
+    padding-top: 5px;
+    transform: rotateY(25deg) rotate(5deg);
+  }
+  h5.logo-warp-two {
+    padding-top: 10px;
+  }
+  h5.logo-warp-three {
+    padding-top: 5px;
+    transform: rotateY(-25deg) rotate(-5deg);
+  }
+}
+
 /* ---- NAV ------ */
 
 nav {
@@ -264,7 +305,6 @@ nav {
   position: sticky;
   top: 0;
   background-color: #f7f7f7;
-  z-index: 10;
   border-left: 1px solid;
   border-bottom: 1px solid #000;
   border-color: transparent;
